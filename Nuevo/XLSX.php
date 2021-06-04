@@ -23,7 +23,7 @@ function hasWeird($string){
 }
 function newString($string){
     $news = "";
-    $arr = explode("",$string);
+    $arr = str_split($string);
     foreach($arr as $indexL){
         if($indexL != "*"){
             $news = $news.$indexL; 
