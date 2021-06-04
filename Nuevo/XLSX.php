@@ -1,16 +1,61 @@
 <?php 
 require_once 'Classes/PHPExcel.php';
-$file = '/home/andre/PLANEACION 2021 MINMER.xlsx';
-
-function readAndC($file){
+function hasAA($string){
+    $prove = false;//explode
+    $arr = explode(" ",$string);
+    foreach($arr as $indexL){
+        if($indexL === "a" || $indexL === "A"){
+            $prove = true;
+            break;
+        }
+    }
+    return $prove;
+}
+function readAndC($fileI){
+$file = __DIR__."/uploads/".$fileI;
 $inputFileType = PHPExcel_IOFactory::identify($file);
 $obReader = PHPExcel_IOFactory::createReader($inputFileType);
 $obPHPE = $obReader->load($file);
 $sheet = $obPHPE->getSheet(0);
 $highesRow = $sheet->getHighestRow();
+$con = mysqli_connect("localhost","root","Lasric.2018","Minmer2");
 for($row = 2; $row <= $highesRow; $row++){
-    echo "".$sheet->getCell("A".$row)->getValue();
-    echo "<br>";
+    $HoraE = "ERROR:500";
+    $FechaCB =  $sheet->getCell("A".$row)->getCalculatedValue();
+    $FechaC = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaCB));
+    echo "fecha c ".$FechaC."<br>";
+    $FechaEB = $sheet->getCell("B".$row)->getCalculatedValue();
+    $FechaE = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaEB));
+    echo "fecha E ".$FechaE."<br>"; 
+    $Zona = $sheet->getCell("C".$row)->getCalculatedValue();
+    $DireccionE = $sheet->getCell("D".$row)->getCalculatedValue();
+    $RazonS = $sheet->getCell("E".$row)->getCalculatedValue();
+    $HoraEB = $sheet->getCell("F".$row)->getCalculatedValue();
+    if(gettype($HoraEB) != NULL){
+        if(!hasAA($HoraEB)){
+            $HoraE = $HoraEB * 24;
+        }else{
+            $HoraE = $HoraEB;
+        }
+    }else{
+        $HoraE = 'PENDIENTE';
+    }
+    echo gettype($HoraEB)."pertenece a ".$HoraEB." que es ilera ".$row;
+    $SO = $sheet->getCell("G".$row)->getCalculatedValue();
+    $Factura = $sheet->getCell("H".$row)->getCalculatedValue();
+    $NumeroP = $sheet->getCell("I".$row)->getCalculatedValue();
+    $NumeroC = $sheet->getCell("J".$row)->getCalculatedValue();
+    $TipoT = $sheet->getCell("K".$row)->getCalculatedValue();
+    $Operador = $sheet->getCell("M".$row)->getCalculatedValue();
+    $Placas = $sheet->getCell("N".$row)->getCalculatedValue();
+    $sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado) VALUE('$Zona',$FechaC,'',$FechaE,'$HoraE.`:00`','$DireccionE','','','$SO','$Factura','$NumeroP','$NumeroC','','$TipoT','$Placas','$Operador','','','','',0)";
+    $res = mysqli_query($con,$sql);
+    if($res){
+        //echo "Completado"."<br>";
+    }else{
+        //echo "Error 500, tonto"."<br>";
+    }
+    echo mysqli_error($con);
 }
 }
 ?>

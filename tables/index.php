@@ -1,5 +1,8 @@
 <?php 
+error_reporting(E_ALL);
+ini_set('display_errors','1');
 $city = $_GET['city'];
+$con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
 ?>
 <!DOCTYPE html>
 <html lang="en">

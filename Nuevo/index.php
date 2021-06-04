@@ -70,8 +70,8 @@ function hasA($string){
 <script src="secureacces.js"></script>
 </html>
 <?php 
-error_reporting(E_ALL);
-ini_set('display_errors','1');
+// error_reporting(E_ALL);
+// ini_set('display_errors','1');
 if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name']) && !empty($_FILES['myfile']['tmp_name'])){
     if(!is_uploaded_file($_FILES['myfile']['tmp_name'])){
         echo "Error: el fichero no fue procesado correctamente";
