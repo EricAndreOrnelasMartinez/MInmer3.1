@@ -32,7 +32,6 @@ function newString($string){
         }
     }
     }
-}
 function readAndC($fileI){
 $file = __DIR__."/uploads/".$fileI;
 $inputFileType = PHPExcel_IOFactory::identify($file);
