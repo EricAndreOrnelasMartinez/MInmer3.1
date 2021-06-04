@@ -24,7 +24,7 @@ function hasWeird($string){
 function newString($string){
     $news = "";
     $arr = str_split($string);
-    $size = sizeof($arr)
+    $size = sizeof($arr);
     for($i = 1; $i <= $size; $i++){
         if($arr[$i] != "*"){
             $news = $news.$arr[$i];
