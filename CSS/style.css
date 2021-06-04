@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: white;
+}
+body{
+    background-color: rgb(50, 50, 151);
+}
+form{
+    background-color: rgb(87, 87, 170);
+    margin: calc(25% + 100px);
+	margin-top: 70px;
+	margin-bottom: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    padding-bottom: 30px;
+
+
+}
+input{
+    width: 80%;
+    margin: 15px;
+    padding: 10px;
+    margin-left: 40px;
+    color: black;
+}
+
+input[type="submit"]{
+    margin-left: 50px;
+    background-color: black;
+    border:none;
+    color: white;
+    transition: all 0.4s linear;
+}
+input[type="submit"]:hover{
+    background-color:rgb(0, 0, 0,0.1);
+    color:white;
+    border-radius: 25px;
+    border: black solid 3px;
+}
+button{
+    width: 80%;
+    padding: 10px;
+    margin-left: 50px;
+    background-color:black;
+    border: none;
+    transition: all 0.4s linear;
+}
+button:hover{
+    background-color:rgb(0, 0, 0,0.1);
+    color: black;
+    border-radius: 25px;
+    border: black solid 3px;
+}
+h2{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+h3{
+    text-align: center;
+}
+.bad{
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.ok{
+    background-color: rgb(78, 173, 78);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.option{
+    background-color: black;
+}
