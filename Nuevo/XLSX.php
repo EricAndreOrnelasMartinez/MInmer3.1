@@ -28,6 +28,7 @@ function newString($string){
         if($indexL != "*"){
             $news = $news.$indexL; 
         }
+        echo $news."<br>";
         return $news;
     }
 }
