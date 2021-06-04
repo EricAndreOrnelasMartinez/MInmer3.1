@@ -69,14 +69,13 @@ for($row = 2; $row <= $highesRow; $row++){
     $Operador = $sheet->getCell("M".$row)->getCalculatedValue();
     $Placas = $sheet->getCell("N".$row)->getCalculatedValue();
     $sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado) VALUE('$Zona',$FechaC,'',$FechaE,'$HoraE','$DireccionE','','','$SO','$Factura','$NumeroP','$NumeroC','','$TipoT','$Placas','$Operador','','','','',0)";
-    echo $sql."<br>";
-    //$res = mysqli_query($con,$sql);
-    //if($res){
+    $res = mysqli_query($con,$sql);
+    if($res){
         //echo "Completado"."<br>";
-    //}else{
+    }else{
         //echo "Error 500, tonto"."<br>";
-    //}
-    //echo mysqli_error($con);
+    }
+    echo mysqli_error($con);
 }
 }
 ?>
