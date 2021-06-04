@@ -68,7 +68,7 @@ for($row = 2; $row <= $highesRow; $row++){
     $TipoT = $sheet->getCell("K".$row)->getCalculatedValue();
     $Operador = $sheet->getCell("M".$row)->getCalculatedValue();
     $Placas = $sheet->getCell("N".$row)->getCalculatedValue();
-    $sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado) VALUE('$Zona',$FechaC,'',$FechaE,'$HoraE','$DireccionE','','','$SO','$Factura','$NumeroP','$NumeroC','','$TipoT','$Placas','$Operador','','','','',0)";
+    $sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado) VALUE('$Zona','$FechaC','','$FechaE','$HoraE','$DireccionE','','','$SO','$Factura','$NumeroP','$NumeroC','','$TipoT','$Placas','$Operador','','','','',0)";
     $res = mysqli_query($con,$sql);
     if($res){
         //echo "Completado"."<br>";
