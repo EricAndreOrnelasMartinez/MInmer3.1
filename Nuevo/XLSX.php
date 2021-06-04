@@ -51,7 +51,7 @@ for($row = 2; $row <= $highesRow; $row++){
     $DireccionE = $sheet->getCell("D".$row)->getCalculatedValue();
     $RazonS = $sheet->getCell("E".$row)->getCalculatedValue();
     $HoraEB = $sheet->getCell("F".$row)->getCalculatedValue();
-    if(gettype($HoraEB) != NULL){
+    if(!empty($HoraEB)){
         if(!hasAA($HoraEB)){
             $HoraE = $HoraEB * 24;
             $HoraE = $HoraE.":00";
