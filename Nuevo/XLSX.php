@@ -24,12 +24,13 @@ function hasWeird($string){
 function newString($string){
     $news = "";
     $arr = str_split($string);
-    foreach($arr as $indexL){
-        if($indexL != "*"){
-            $news = $news.$indexL; 
-            echo $news;
+    $size = sizeof($arr)
+    for($i = 1; $i <= $size; $i++){
+        if($arr[$i] != "*"){
+            $news = $news.$arr[$i];
+            return $news;
         }
-        return $news;
+    }
     }
 }
 function readAndC($fileI){
