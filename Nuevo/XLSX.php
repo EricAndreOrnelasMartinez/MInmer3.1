@@ -27,8 +27,8 @@ function newString($string){
     foreach($arr as $indexL){
         if($indexL != "*"){
             $news = $news.$indexL; 
+            echo $news;
         }
-        echo $news."<br>";
         return $news;
     }
 }
@@ -48,6 +48,7 @@ for($row = 2; $row <= $highesRow; $row++){
     $FechaE = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaEB));
     $ZonaB = $sheet->getCell("C".$row)->getCalculatedValue();
     $Zona = newString($ZonaB);
+    echo $Zona;
     $DireccionE = $sheet->getCell("D".$row)->getCalculatedValue();
     $RazonS = $sheet->getCell("E".$row)->getCalculatedValue();
     $HoraEB = $sheet->getCell("F".$row)->getCalculatedValue();
@@ -69,13 +70,14 @@ for($row = 2; $row <= $highesRow; $row++){
     $Operador = $sheet->getCell("M".$row)->getCalculatedValue();
     $Placas = $sheet->getCell("N".$row)->getCalculatedValue();
     $sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado) VALUE('$Zona',$FechaC,'',$FechaE,'$HoraE','$DireccionE','','','$SO','$Factura','$NumeroP','$NumeroC','','$TipoT','$Placas','$Operador','','','','',0)";
-    $res = mysqli_query($con,$sql);
-    if($res){
+    echo $sql."<br>";
+    //$res = mysqli_query($con,$sql);
+    //if($res){
         //echo "Completado"."<br>";
-    }else{
+    //}else{
         //echo "Error 500, tonto"."<br>";
-    }
-    echo mysqli_error($con);
+    //}
+    //echo mysqli_error($con);
 }
 }
 ?>
