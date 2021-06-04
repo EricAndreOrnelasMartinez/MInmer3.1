@@ -47,8 +47,7 @@ for($row = 2; $row <= $highesRow; $row++){
     $FechaEB = $sheet->getCell("B".$row)->getCalculatedValue();
     $FechaE = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaEB));
     $ZonaB = $sheet->getCell("C".$row)->getCalculatedValue();
-    $Zona = newString($ZonaB);
-    echo $Zona;
+    $Zona = str_replace("*","",$ZonaB);
     $DireccionE = $sheet->getCell("D".$row)->getCalculatedValue();
     $RazonS = $sheet->getCell("E".$row)->getCalculatedValue();
     $HoraEB = $sheet->getCell("F".$row)->getCalculatedValue();
