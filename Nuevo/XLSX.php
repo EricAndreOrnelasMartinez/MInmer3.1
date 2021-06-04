@@ -11,6 +11,26 @@ function hasAA($string){
     }
     return $prove;
 }
+function hasWeird($string){
+    $prove = false;
+    $arr = explode("",$string);
+    foreach($arr as $indexL){
+        if($indexL === "*"){
+            $prove = true;
+            break;
+        }
+    }
+}
+function newString($string){
+    $news = "";
+    $arr = explode("",$string);
+    foreach($arr as $indexL){
+        if($indexL != "*"){
+            $news = $news.$indexL; 
+        }
+        return $news;
+    }
+}
 function readAndC($fileI){
 $file = __DIR__."/uploads/".$fileI;
 $inputFileType = PHPExcel_IOFactory::identify($file);
@@ -25,7 +45,8 @@ for($row = 2; $row <= $highesRow; $row++){
     $FechaC = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaCB));
     $FechaEB = $sheet->getCell("B".$row)->getCalculatedValue();
     $FechaE = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaEB));
-    $Zona = $sheet->getCell("C".$row)->getCalculatedValue();
+    $ZonaB = $sheet->getCell("C".$row)->getCalculatedValue();
+    $Zona = newString($ZonaB);
     $DireccionE = $sheet->getCell("D".$row)->getCalculatedValue();
     $RazonS = $sheet->getCell("E".$row)->getCalculatedValue();
     $HoraEB = $sheet->getCell("F".$row)->getCalculatedValue();
