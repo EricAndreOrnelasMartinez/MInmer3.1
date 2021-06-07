@@ -30,7 +30,7 @@ function hasA($string){
 </head>
 <body>
     <form id="data">
-    Ciudad: <select class="option" name="city">
+    Zona: <select class="option" name="Zona">
         <option value="CDMX">CDMX</option>
         <option value="GDL">GDL</option>
         <option value="MTY">MTY</option>
@@ -38,25 +38,25 @@ function hasA($string){
         <option value="SJD">SJD</option>
         <option value="QRO">QRO</option>
     </select><br>
-    Fecha de carga: <input type="date" name="FechaC">
-    Fecha de entrega: <input type="date" name="FechaE">
-    Operador: <input type="text" name="Operador">
-    Placas: <input type="text" name="Placas">
-    ID: <input type="text" name="ID">
-    SO: <input type="text" name="SO">
-    Factura: <input type="text" name="Factura">
-    Cliente: <input type="text" name="Cliente">
-    PZS: <input type="text" name="PZS" >
-    Cajas: <input type="text" name="Caja">
-    Subtotal: <input type="text" name="Subtotal">
-    Horario: <input type="text" name="Horario">
-    Direccion: <input type="text" name="Direccion">
-    Destino: <input type="text" name="Destino" >
-    Concepto: <input type="text" name="Concepto">
-    Capacidad: <input type="text" name="Capacidad">
-    Observaciones: <input type="text" name="Observaciones">
-    OE: <input type="text" name="OE">
-    Custodia: <input type="text" name="Custodia">
+    <label>Fecha de carga</label><input type="date" name="FechaC">
+    <label>Hora de carga</label><input type="text" name="HoraC">
+    <label>Fecha de entrega</label><input type="date" name="FechaE">
+    <label>Hora de entrega</label><input type="text" name="HoraE">
+    <label>Dirección de entrega</label><input type="text" name="DireccionE">
+    <label>Razón social</label><input type="text" name="RazonS">
+    <label>Datos de contacto</label><input type="text" name="DatosC">
+    <label>SO</label><input type="text" name="SO">
+    <label>Factura</label><input type="text" name="Factura">
+    <label>Numero de piezas</label><input type="text" name="NumeroP">
+    <label>Numero de cajas</label><input type="text" name="NumeroC">
+    <label>Numero de Tarimas</label><input type="text" name="NumeroT">
+    <label>Tipo de transporte</label><input type="text" name="TipoT">
+    <label>Placas</label><input type="text" name="Placas">
+    <label>Operador</label><input type="text" name="Operador">
+    <label>Maniobrista</label><input type="text" name="Maniobrista">
+    <label>Custodia</label><input type="text" name="Custodia">
+    <label>Hora de salida con custodia</label><input type="text" name="HoraSCC">
+    <label>Observaciones</label><input type="text" name="Observaciones">
     <input type="submit" value="Guardar">
     <a href="../tables/?city=CDMX"><button type="button">Regresar</button></a>
     <h3 id="res"></h3>
@@ -96,6 +96,6 @@ if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name'
     echo $_FILES['myfile']['name'];
     include('XLSX.php');
     readAndC($_FILES['myfile']['name']);
-    //header('Location:../tables/?city=CDMX');
+    header('Location:../tables/?city=CDMX');
 }
 ?>

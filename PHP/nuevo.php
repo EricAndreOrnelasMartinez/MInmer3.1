@@ -1,26 +1,26 @@
 <?php 
 require_once('dbcon.php');
-$city = $_POST['city'];
+$Zona = $_POST['Zona'];
 $FechaC = $_POST['FechaC'];
+$HoraC = $_POST['HoraC'];
 $FechaE = $_POST['FechaE'];
-$Operador = $_POST['Operador'];
-$Placas = $_POST['Placas'];
-$ID = $_POST['ID'];
+$HoraE = $_POST['HoraE'];
+$DireccionE = $_POST['DireccionE'];
+$RazonS = $_POST['RazonS'];
+$DatosC = $_POST['DatosC'];
 $SO = $_POST['SO'];
 $Factura = $_POST['Factura'];
-$Cliente = $_POST['Cliente'];
-$PZS = $_POST['PZS'];
-$Cajas = $_POST['Caja'];
-$Subtotal = $_POST['Subtotal'];
-$Horario = $_POST['Horario'];
-$Direccion = $_POST['Direccion'];
-$Destino = $_POST['Destino'];
-$Concepto = $_POST['Concepto'];
-$Capacidad = $_POST['Capacidad'];
-$Observaciones = $_POST['Observaciones'];
-$OE = $_POST['OE'];
+$NumeroP = $_POST['NumeroP'];
+$NumeroC = $_POST['NumeroC'];
+$NumeroT = $_POST['NumeroT'];
+$TipoT = $_POST['TipoT'];
+$Placas = $_POST['Placas']:
+$Operador = $_POST['Operador'];
+$Maniobrista  = $_POST['Maniobrista'];
 $Custodia = $_POST['Custodia'];
-$sql = "INSERT INTO $city(FechaC,FechaE,Operador,Placas,ID,SO,Factura,Cliente,PZS,Caja,Subtotal,Horario,Direccion,Destino,Concepto,Capacidad,Observaciones,OE,Custodia,Terminado) VALUES('$FechaC','$FechaE','$Operador','$Placas','$ID','$SO','$Factura','$Cliente','$PZS','$Cajas','$Subtotal','$Horario','$Direccion','$Destino','$Concepto','$Capacidad','$Observaciones','$OE','$Custodia',false);";
+$HoraSCC = $_POST['HoraSCC']; 
+$Observaciones = $_POST['Observaciones']; 
+$sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado) VALUE('$Zona','$FechaC','','$FechaE','$HoraE','$DireccionE','','','$SO','$Factura','$NumeroP','$NumeroC','','$TipoT','$Placas','$Operador','','','','',0)";
 $res = mysqli_query($con,$sql);
 if($res){
     echo json_encode('1');
