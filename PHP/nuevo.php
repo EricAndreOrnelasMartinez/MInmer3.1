@@ -11,12 +11,12 @@ $DatosC = $_POST['DatosC'];
 $SO = $_POST['SO'];
 $Factura = $_POST['Factura'];
 $NumeroP = $_POST['NumeroP'];
+$NumeroC = $_POST['NumeroC'];
+$NumeroT = $_POST['NumeroT'];
+$TipoT = $_POST['TipoT'];
+$Placas = $_POST['Placas']:
 echo json_encode('Todo bien');
 exit;
-// $NumeroC = $_POST['NumeroC'];
-// $NumeroT = $_POST['NumeroT'];
-// $TipoT = $_POST['TipoT'];
-// $Placas = $_POST['Placas']:
 // $Operador = $_POST['Operador'];
 // $Maniobrista  = $_POST['Maniobrista'];
 // $Custodia = $_POST['Custodia'];
