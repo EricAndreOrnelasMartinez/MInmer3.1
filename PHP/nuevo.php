@@ -22,7 +22,7 @@ $HoraSCC = $_POST['HoraSCC'];
 $Observaciones = $_POST['Observaciones'];
 $sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado) VALUE('$Zona','$FechaC','$HoraC','$FechaE','$HoraE','$DireccionE','$RazonS','$DatosC','$SO','$Factura','$NumeroP','$NumeroC','$NumeroT','$TipoT','$Placas','$Operador','$Maniobrista','$Custodia','$HoraSCC','$Observaciones',0)";
 $res = mysqli_query($con,$sql);
-echo json_encode('Todo bien');
+echo json_encode($res);
 exit; 
 // if($res){
 //    // echo json_encode('1');
