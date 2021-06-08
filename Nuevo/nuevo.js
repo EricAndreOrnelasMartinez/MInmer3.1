@@ -30,6 +30,8 @@ form.addEventListener('submit', e =>{
         }else if(aux === '0'){
             h3.innerHTML = 'Error al capturar los datos'
             h3.className = 'bad'
+        }else{
+            console.log(aux)
         }
     }).catch(err =>{
         console.log(err);
