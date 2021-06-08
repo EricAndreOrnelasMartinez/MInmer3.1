@@ -14,7 +14,7 @@ $NumeroP = $_POST['NumeroP'];
 $NumeroC = $_POST['NumeroC'];
 $NumeroT = $_POST['NumeroT'];
 $TipoT = $_POST['TipoT'];
-$Placas = $_POST['pla']:
+//$Placas = $_POST['pla']:
 echo json_encode('Todo bien');
 exit;
 // $Operador = $_POST['Operador'];
