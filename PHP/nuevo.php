@@ -15,9 +15,9 @@ $NumeroC = $_POST['NumeroC'];
 $NumeroT = $_POST['NumeroT'];
 $TipoT = $_POST['TipoT'];
 //$Placas = $_POST['pla']:
+$Operador = $_POST['Operador'];
 echo json_encode('Todo bien');
 exit;
-// $Operador = $_POST['Operador'];
 // $Maniobrista  = $_POST['Maniobrista'];
 // $Custodia = $_POST['Custodia'];
 // $HoraSCC = $_POST['HoraSCC']; 
