@@ -51,7 +51,7 @@ function hasA($string){
     <label>Numero de cajas</label><input type="text" name="NumeroC">
     <label>Numero de Tarimas</label><input type="text" name="NumeroT">
     <label>Tipo de transporte</label><input type="text" name="TipoT">
-    <label>Placas</label><input type="text" name="Placas">
+    <label>Placas</label><input type="text" name="pla">
     <label>Operador</label><input type="text" name="Operador">
     <label>Maniobrista</label><input type="text" name="Maniobrista">
     <label>Custodia</label><input type="text" name="Custodia">
