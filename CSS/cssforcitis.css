@@ -5,6 +5,7 @@
 header{
     position: fixed;
     margin-top: 0;
+    width: 500%;
     background-color: rgb(11, 11, 80);
 }
 .menu{
@@ -50,7 +51,6 @@ thead{
 	background-color: black;
 	border-bottom: solid 5px purple;
 	color: white;
-
 }
 
 tr:nth-child(even){
