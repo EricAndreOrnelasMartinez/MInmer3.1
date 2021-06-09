@@ -53,10 +53,8 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             ?>
         </ul>
     </nav>
-    </header>
-    <section>
-        <table class="main">
-            <thead>
+    <table class="main">
+    <thead>
                 <tr>
                     <td>Progreso</td>
                     <td>Zona</td>
@@ -92,6 +90,10 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                     ?>
                 </tr>
             </thead>
+    </table>
+    </header>
+    <section>
+        <table class="main">
             <?php
         function validation($var){
             return !empty($var);
