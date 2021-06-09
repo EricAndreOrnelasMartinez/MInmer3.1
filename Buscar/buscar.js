@@ -124,7 +124,6 @@ form.addEventListener('submit', e  =>{
             color = 'green'
         }
         output += `<tr class="${color}">
-        <td><a href="../tables/Evidencias/${zone.value}/${data[i].Factura}.pdf">Ir</a></td>
         <td>${total}%</td>
         <td>${data[i].Zona}</td>
         <td>${data[i].FechaC}</td>
@@ -146,6 +145,7 @@ form.addEventListener('submit', e  =>{
         <td>${data[i].Custodia}</td>
         <td>${data[i].HoraSCC}</td>
         <td>${data[i].Observaciones}</td>
+        <td><a href="../tables/Evidencias/${zone.value}/${data[i].Factura}.pdf">Ir</a></td>
         <td>${data[i].Terminado}</td>
         </tr>`
         table.innerHTML = output;
