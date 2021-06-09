@@ -5,14 +5,12 @@
 header{
     position: fixed;
     margin-top: 0;
-    width: 500%;
     background-color: rgb(11, 11, 80);
 }
 .menu{
     padding-top: 0;
     background-color: rgb(11, 11, 80);
     padding: 15px;
-    width: 150%;
     padding-bottom: 2px;
 }
 .menu ul li{
