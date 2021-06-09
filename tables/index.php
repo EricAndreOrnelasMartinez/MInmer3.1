@@ -197,7 +197,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             <td><?php echo $show['Custodia'] ?></td>
             <td><?php echo $show['HoraSCC'] ?></td>
             <td><?php echo $show['Observaciones'] ?></td>
-            <td><a href="./Evidencias/<?php echo $city ?>/<?php echo $show['Factura'] ?>.pdf"><img src="./link.png"  width="50"></a></td>
+            <td><a href="./Evidencias/<?php echo $city ?>/<?php echo $show['Factura'] ?>.pdf"><img src="./link.png"  width="20"></a></td>
             <td><?php echo $show['Terminado'] ?></td>
             <?php
             $aux = $_SESSION['nivel'];
