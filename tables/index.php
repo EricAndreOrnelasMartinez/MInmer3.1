@@ -163,7 +163,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             if(validation($show['Observaciones'])){
                 $total = $total + 4.5;
             }
-            if($show['Terminado'] === 1){
+            if($show['Terminado'] > 0){
                 $total = $total + 5.5;
             }
             $color = "red";
