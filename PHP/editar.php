@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $mail = $_SESSION['mail'];
-$id = $_GET['ids'];
+$id = $_GET['id'];
 require_once('dbcon.php');
 $FechaC = $_POST['FechaC'];
 $HoraC = $_POST['HoraC'];
@@ -25,7 +25,7 @@ $Observaciones = $_POST['Observaciones'];
 $sqlUpdate = "UPDATE $Zona SET FechaC='$FechaC',HoraC='$HoraC',FechaE='$FechaE',HoraE='$HoraE',DireccionE='$DireccionE',RazonS='$RazonS',DatosC='$DatosC',SO='$SO',Factura='$Factura',NumeroP='$NumeroP',NumeroC='$NumeroC',NumeroT='$NumeroT',TipoT='$TipoT',Placas='$Placas',Operador='$Operador',Maniobrista='$Maniobrista',Custodia='$Custodia',HoraSCC='$HoraSCC',Observaciones='$Observaciones' WHERE ID_SQL=$id";
 $resulupdate = mysqli_query($con,$sqlUpdate);
 $sqlInsert = "INSERT INTO Modifications(Mail,Hour,Day,City,RowN,Description) VALUE('$mail',current_time(),current_date(),'$city',$id,'Editado');";
-//$query = mysqli_query($con,$sqlInsert);
+$query = mysqli_query($con,$sqlInsert);
 if($resulupdate){
     echo json_encode('1');
 }else {
