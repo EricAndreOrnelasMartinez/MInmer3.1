@@ -81,9 +81,6 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                     <td>Observaciones</td>
                     <td>Evidencia</td>
                     <td>Terminado</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
                     <?php 
                     $aux = $_SESSION['nivel'];
                     if($aux > 3){
@@ -93,6 +90,8 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                     <?php
                     }
                     ?>
+                    <td>-</td>
+                    <td>-</td>
                 </tr>
             </thead>
             <?php
