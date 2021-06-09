@@ -25,49 +25,55 @@ form.addEventListener('submit', e  =>{
     if((data.length > 0)){
     let output = `
     <tr>
-    <td>Evidencia</td>
-    <td>Progreso</td>               
-    <td>ID SQL</td>
+    <td>Progreso</td>
+    <td>Zona</td>
     <td>Fecha de carga</td>
+    <td>Hora de carga</td>
     <td>Fecha de entrega</td>
-    <td>Operador</td>
-    <td>Placas</td>
-    <td>ID</td>
+    <td>Hora de entrega</td>
+    <td>Dirección de entrega</td>
+    <td>Razón Social</td>
+    <td>Datos de contacto</td>
     <td>SO</td>
     <td>Factura</td>
-    <td>Cliente</td>
-    <td>PZS</td>
-    <td>Cajas</td>
-    <td>Subtotal</td>
-    <td>Horario</td>
-    <td>Dirección</td>
-    <td>Destino</td>
-    <td>Concepto</td>
-    <td>Capacidad</td>
-    <td>Observaciones</td>
-    <td>OE</td>
+    <td>Número de piezas</td>
+    <td>Número de cajas</td>
+    <td>Número de tarimas</td>
+    <td>Tipo de trasporte</td>
+    <td>Placas</td>
+    <td>Operador</td>
+    <td>Maniobrista</td>
     <td>Custodia</td>
+    <td>Hora salida con Custodia</td>
+    <td>Observaciones</td>
+    <td>Evidencia</td>
     <td>Terminado</td>
     </tr>`;
     for(i in data){
         let total = 0;
         let color = '';
-        if(isNotEmpty(data[i].ID_SQL)){
+        if(isNotEmpty(data[i].Zona)){
             total += 5
         }
         if(isNotEmpty(data[i].FechaC)){
             total += 5
         }
+        if(isNotEmpty(data[i].HoraC)){
+            total += 5
+        }
         if(isNotEmpty(data[i].FechaE)){
             total += 5
         }
-        if(isNotEmpty(data[i].Operador)){
+        if(isNotEmpty(data[i].HoraE)){
             total += 5
         }
-        if(isNotEmpty(data[i].Placas)){
+        if(isNotEmpty(data[i].DireccionE)){
             total += 5
         }
-        if(isNotEmpty(data[i].ID)){
+        if(isNotEmpty(data[i].RazonS)){
+            total += 5
+        }
+        if(isNotEmpty(data[i].DatosC)){
             total += 5
         }
         if(isNotEmpty(data[i].SO)){
@@ -76,40 +82,34 @@ form.addEventListener('submit', e  =>{
         if(isNotEmpty(data[i].Factura)){
             total += 5
         }
-        if(isNotEmpty(data[i].Cliente)){
+        if(isNotEmpty(data[i].NumeroP)){
             total += 5
         }
-        if(isNotEmpty(data[i].PZS)){
+        if(isNotEmpty(data[i].NumeroC)){
             total += 5
         }
-        if(isNotEmpty(data[i].Caja)){
+        if(isNotEmpty(data[i].NumeroT)){
             total += 5
         }
-        if(isNotEmpty(data[i].Subtotal)){
+        if(isNotEmpty(data[i].TipoT)){
             total += 5
         }
-        if(isNotEmpty(data[i].Horario)){
+        if(isNotEmpty(data[i].Placas)){
             total += 5
         }
-        if(isNotEmpty(data[i].Direccion)){
+        if(isNotEmpty(data[i].Operador)){
             total += 5
         }
-        if(isNotEmpty(data[i].Destino)){
-            total += 5
-        }
-        if(isNotEmpty(data[i].Concepto)){
-            total += 5
-        }
-        if(isNotEmpty(data[i].Capacidad)){
-            total += 5
-        }
-        if(isNotEmpty(data[i].Observaciones)){
-            total += 5
-        }
-        if(isNotEmpty(data[i].OE)){
+        if(isNotEmpty(data[i].Maniobrista)){
             total += 5
         }
         if(isNotEmpty(data[i].Custodia)){
+            total += 5
+        }
+        if(isNotEmpty(data[i].HoraSCC)){
+            total += 5
+        }
+        if(isNotEmpty(data[i].Observaciones)){
             total += 5
         }
         if(data[i].Terminado === 1){
@@ -123,28 +123,28 @@ form.addEventListener('submit', e  =>{
             color = 'green'
         }
         output += `<tr class="${color}">
-        <td><a href="../uploadE/uploads/${data[i].Factura}.pdf">Ir</a></td>
+        <td><a href="../tables/Evidencias/${select.value}/${data[i].Factura}.pdf">Ir</a></td>
         <td>${total}%</td>
-        <td>${data[i].ID_SQL}</td>
+        <td>${data[i].Zona}</td>
         <td>${data[i].FechaC}</td>
+        <td>${data[i].HoraC}</td>
         <td>${data[i].FechaE}</td>
-        <td>${data[i].Operador}</td>
-        <td>${data[i].Placas}</td>
-        <td>${data[i].ID}</td>
+        <td>${data[i].HoraE}</td>
+        <td>${data[i].DireccionE}</td>
+        <td>${data[i].RazonS}</td>
+        <td>${data[i].DatosC}</td>
         <td>${data[i].SO}</td>
         <td>${data[i].Factura}</td>
-        <td>${data[i].Cliente}</td>
-        <td>${data[i].PZS}</td>
-        <td>${data[i].Caja}</td>
-        <td>${data[i].Subtotal}</td>
-        <td>${data[i].Horario}</td>
-        <td>${data[i].Direccion}</td>
-        <td>${data[i].Destino}</td>
-        <td>${data[i].Concepto}</td>
-        <td>${data[i].Capacidad}</td>
-        <td>${data[i].Observaciones}</td>
-        <td>${data[i].OE}</td>
+        <td>${data[i].NumeroP}</td>
+        <td>${data[i].NumeroC}</td>
+        <td>${data[i].NumeroT}</td>
+        <td>${data[i].TipoT}</td>
+        <td>${data[i].Placas}</td>
+        <td>${data[i].Operador}</td>
+        <td>${data[i].Maniobrista}</td>
         <td>${data[i].Custodia}</td>
+        <td>${data[i].HoraSCC}</td>
+        <td>${data[i].Observaciones}</td>
         <td>${data[i].Terminado}</td>
         </tr>`
         table.innerHTML = output;
