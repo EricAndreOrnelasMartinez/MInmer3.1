@@ -2,6 +2,7 @@ const form = document.getElementById('main');
 const table = document.getElementById('table')
 const h2 = document.getElementById('res')
 const select = document.getElementById('atribute')
+const zone = document.getElementById('zone')
 const query = document.getElementById('query')
 const query2 = document.getElementById('query2')
 fetch('../PHP/sessioncheck.php')
@@ -123,7 +124,7 @@ form.addEventListener('submit', e  =>{
             color = 'green'
         }
         output += `<tr class="${color}">
-        <td><a href="../tables/Evidencias/${select.value}/${data[i].Factura}.pdf">Ir</a></td>
+        <td><a href="../tables/Evidencias/${zone.value}/${data[i].Factura}.pdf">Ir</a></td>
         <td>${total}%</td>
         <td>${data[i].Zona}</td>
         <td>${data[i].FechaC}</td>
