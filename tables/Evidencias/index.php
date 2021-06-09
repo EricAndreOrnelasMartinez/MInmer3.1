@@ -12,7 +12,7 @@
 <h4>El nombre la evidencia debe ser el número de factura</h4>    
     Subir Evidencia PDF: <input type="file" name="myfile">
         <input type="submit" value="Subir">
-        <button type="button"><a href="../tables/?city=CDMX">Volver</a></button>
+        <a href="../?city=CDMX"><button type="button">Volver</button></a>
     </form>
 </body>
 <script src="../JS/session.js"></script>
