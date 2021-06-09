@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <form id="data">
+        <input type="text" name="name" placeholder="Nombre" required>
+        <input type="text" name="last" placeholder="Apellido" required>
+        <input type="email" name="mail" placeholder="Email" required>
+        <input type="password" name="pass1" id="con1" placeholder="Contraseña" required>
+        <input type="password" name="pass2" id="con2" placeholder="Confirme" required>
+        <input type="hidden" name="nivel" value="2">
+        <input type="submit" value="Sign up">
+        <a href="../"><button type="button">Volver</button></a>
+        <h3 id="res"></h3>
+    </form>
+</body>
+<script src="signup.js"></script>
+</html>
