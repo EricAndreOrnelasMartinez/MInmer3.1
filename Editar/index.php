@@ -47,12 +47,17 @@
     <input type="hidden" name="Zona" value="<?php echo $city ?>">
     <?php 
     }
-    if($terminado === 1 && $nivel < 6){
+    if($terminado === 0){
     ?>
     <input type="submit" value="Guardar">
     <?php 
-    }
+    }else{
     ?>
+    <?php 
+    if($nivel > 5){
+    ?>
+    <input type="submit" value="Guardar">
+    <?php }?>
     <a href="../tables/?city=CDMX"><button type="button">Volver</button></a>  
     <h3 id="res"></h3>
 </form>
