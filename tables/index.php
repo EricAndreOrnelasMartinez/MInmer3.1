@@ -31,7 +31,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                 <li><a href="./?city=SJD">SJD</a></li>
                 <li><a href="./?city=QRO">QRO</a></li>
                 <li><a href="../Modificaciones/">Modificaciones</a></li>
-                <li><a href="../Buscar/">Buscar</a></li>
+                <li><a href="../Buscar/"><img src="./perfil.png" width="40"></a></li>
                 <li><a href="../Newuser/">Nuevo usuario</a></li>
                 <li><a href="../logout.php">Log out</a></li>
                 <?php
