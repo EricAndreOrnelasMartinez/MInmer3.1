@@ -171,7 +171,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                 $color = "red";
             } elseif ($total < 99){
                 $color = "yellow";
-            } elseif ($total === 100){
+            } elseif ($total == 100){
                 $color = "green";
             }
         ?>
