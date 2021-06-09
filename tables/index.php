@@ -23,7 +23,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             $rowN = $_SESSION['rowN'];
             if($aux >= 5){
                 ?>
-                <li><a href="../Perfil">Perfil</a></li>
+                <li><a href="../Perfil"><img src="./perfil.png" width="40"></a></li>
                 <li><a href="./?city=CDMX">CDMX</a></li>
                 <li><a href="./?city=GDL">GDL</a></li>
                 <li><a href="./?city=MTY">MTY</a></li>
@@ -37,14 +37,14 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                 <?php
             }else if($aux <= 5 && $aux >= 3){
                 ?>
-                <li><a href="../Perfil">Perfil</a></li>
+                <li><a href="../Perfil"><img src="./perfil.png" width="40"></a></li>
                 <li><a href="./?city=CDMX">CDMX</a></li>
                 <li><a href="./?city=GDL">GDL</a></li>
                 <li><a href="./?city=MTY">MTY</a></li>
                 <li><a href="./?city=CUN">CUN</a></li>
                 <li><a href="./?city=SJD">SJD</a></li>
                 <li><a href="./?city=QRO">QRO</a></li>
-                <li><a href="../Buscar/">Buscar</a></li>
+                <li><a href="../Buscar/"><img src="./Buscar.png" width="40"></a></li>
                 <li><a href="../logout.php">Log out</a></li>
                 <?php
             }else{
