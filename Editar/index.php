@@ -57,7 +57,7 @@
     if($nivel > 5){
     ?>
     <input type="submit" value="Guardar">
-    <?php }?>
+    <?php }}?>
     <a href="../tables/?city=CDMX"><button type="button">Volver</button></a>  
     <h3 id="res"></h3>
 </form>
