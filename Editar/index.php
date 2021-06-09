@@ -43,7 +43,7 @@
     <label>Custodia</label><input type="text" name="Custodia" value="<?php echo $show['Custodia']?>">
     <label>Hora de salida con custodia</label><input type="text" name="HoraSCC" value="<?php echo $show['HoraSCC']?>">
     <label>Observaciones</label><input type="text" name="Observaciones" value="<?php echo $show['Observaciones']?>">
-    <input type="hidden" name="id" value="<?php echo $tem_id ?>">
+    <input type="hidden" name="id" value="<?php echo $id ?>">
     <input type="hidden" name="Zona" value="<?php echo $city ?>">
     <?php 
     }
