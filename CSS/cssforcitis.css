@@ -92,5 +92,5 @@ button:hover{
     transition: all 1.0s linear;
 }
 .copyT{
-    visibility:hidden;
+    width: 1px;
 }
