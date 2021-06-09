@@ -58,4 +58,5 @@ function copytoclip(id){
     text.select();
     text.setSelectionRange(0, 99999)
     document.execCommand('copy')
+    alert('copiado al portapapeles!!')
 }
