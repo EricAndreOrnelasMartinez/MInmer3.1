@@ -5,31 +5,27 @@
 header{
     position: fixed;
     margin-top: 0;
-    width: 500%;
     background-color: rgb(11, 11, 80);
+    height: 100%;
 }
 .menu{
     padding-top: 0;
     background-color: rgb(11, 11, 80);
-    padding: 15px;
-    width: 150%;
     padding-bottom: 2px;
+    height: 100%;
 }
 .menu ul li{
     list-style: none;
-    margin-left: 15px;
-    padding: 10px;
 }
 .menu ul li a{
     text-decoration: none;
     color: white;
-    padding:10px;
     transition: all 0.3s linear;
+    padding: 5px;
 }
 .menu ul{
-    display: flex;
     background-color: rgb(11, 11, 80);
-    padding: 20px;
+    margin: 10px;
 }
 .menu ul li a:hover{
     background-color: black;
@@ -51,7 +47,6 @@ thead{
 	background-color: black;
 	border-bottom: solid 5px purple;
 	color: white;
-
 }
 
 tr:nth-child(even){
@@ -91,4 +86,7 @@ button:hover{
 }
 .green{
     transition: all 1.0s linear;
+}
+.copyT{
+    width: 1px;
 }
