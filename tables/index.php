@@ -222,8 +222,8 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             ?>  
             <td>
             <input type="text" class="copyT" value="
-            Fecha de Carga: <?php echo $show['FechaC']?> || 
-            Hora de Carga: <?php echo $show ['HoraC'] ?> || 
+            Fecha de Carga: <?php echo $show['FechaC']?> || \n
+            Hora de Carga: <?php echo $show ['HoraC'] ?> || \n
             Fecha de entrega: <?php echo $show['FechaE'] ?> || 
             Hora de entrega: <?php echo $show['HoraE'] ?> || 
             Dirección de entrega: <?php echo $show['DireccionE'] ?> || 
