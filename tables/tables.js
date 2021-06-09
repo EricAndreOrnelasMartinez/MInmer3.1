@@ -53,3 +53,9 @@ function finishP(id){
 
 }
 
+function copytoclip(id){
+    let text = document.getElementById(id)
+    text.select();
+    text.setSelectionRange(0, 99999)
+    document.execCommand('copy')
+}

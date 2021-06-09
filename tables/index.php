@@ -81,6 +81,9 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                     <td>Observaciones</td>
                     <td>Evidencia</td>
                     <td>Terminado</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
                     <?php 
                     $aux = $_SESSION['nivel'];
                     if($aux > 3){
@@ -218,6 +221,29 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                 continue;
             }
             ?>  
+            <td>
+            <input type="text" class="copyT" value="
+            Fecha de Carga: <?php echo $show['FechaC']?> || 
+            Hora de Carga: <?php echo $show ['HoraC'] ?> || 
+            Fecha de entrega: <?php echo $show['FechaE'] ?> || 
+            Hora de entrega: <?php echo $show['HoraE'] ?> || 
+            Dirección de entrega: <?php echo $show['DireccionE'] ?> || 
+            Razón social: <?php echo $show['RazonS'] ?> || 
+            Datos de contacto: <?php echo $show['DatosC'] ?> || 
+            SO: <?php echo $show['SO'] ?> || 
+            Factura: <?php echo $show['Factura'] ?> || 
+            Número de piezas: <?php echo $show['NumeroP'] ?> || 
+            Número de cajas: <?php echo $show['NumeroC'] ?> || 
+            Número de tarimas: <?php echo $show['NumeroT'] ?> || 
+            Tipo de transporte: <?php echo $show['TipoT'] ?> || 
+            Placas: <?php echo $show['Placas'] ?> || 
+            Operador: <?php echo $show['Operador'] ?> || 
+            Maniobrista: <?php echo $show['Maniobrista'] ?> || 
+            Custodia: <?php echo $show['Custodia'] ?> || 
+            Hora de salida con custodia: <?php echo $show['HoraSCC'] ?> || 
+            Observaciones: <?php echo $show['Observaciones'] ?>.
+            " id="text<?php echo $show['ID_SQL']?>">    
+            <button type="button" onclick="copytoclip('text<?php echo $show['ID_SQL']?>');">Copiar</button></td>
     </tr>
         <?php }?>
         </table>
