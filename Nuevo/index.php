@@ -29,6 +29,7 @@ function hasA($string){
     <title>Nuevo</title>
 </head>
 <body>
+    
     <form id="data">
     Zona: <select class="option" name="Zona">
         <option value="CDMX">CDMX</option>
@@ -59,8 +60,11 @@ function hasA($string){
     <label>Observaciones</label><input type="text" name="Observaciones">
     <input type="submit" value="Guardar">
     <a href="../tables/?city=CDMX"><button type="button">Regresar</button></a>
+    <button type="button" id="duplicate">Duplicar</button>
     <h3 id="res"></h3>
     </form>
+    <section id="main">
+    </section>
     <form enctype="multipart/form-data" method="post">
         Subir registro exel: <input type="file" name="myfile">
         <input type="submit" value="Subir">
