@@ -3,6 +3,11 @@ body{
 }
 form{
     background-color: rgb(87, 87, 170);
-    width: 90%;
-    margin-left: 5%;
+    width: 50%;
+    margin-left: 25%;
+    padding: 20px;
+}
+input{
+    margin: 10px;
+    width: 80%;
 }
