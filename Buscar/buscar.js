@@ -5,6 +5,7 @@ const select = document.getElementById('atribute')
 const zone = document.getElementById('zone')
 const query = document.getElementById('query')
 const query2 = document.getElementById('query2')
+const backbtn = document.getElementById('volver')
 fetch('../PHP/sessioncheck.php')
 .then(res => res.json())
 .then(ans =>{
@@ -178,3 +179,6 @@ function isNotEmpty(aux){
     }
     return forReturn
 }
+backbtn.addEventListener('click', e=>{
+    window.history.back()
+})

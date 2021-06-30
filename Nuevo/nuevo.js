@@ -2,6 +2,7 @@ const form = document.getElementById('data')
 const h3 = document.getElementById('res')
 const duplicate = document.getElementById('duplicate')
 const section = document.getElementById('main')
+const backbtn = document.getElementById('volver')
 let times = 0;
 const t1 = document.getElementsByName('')
 fetch('../PHP/sessioncheck.php')
@@ -112,3 +113,7 @@ function deleteform(id){
     dad.removeChild(elementtodelete)
     alert('Eliminado')
 }
+
+backbtn.addEventListener('click', e =>{
+    window.history.back()
+})

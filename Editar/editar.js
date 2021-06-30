@@ -1,5 +1,6 @@
 const form = document.getElementById('data')
 const h3 = document.getElementById('res')
+const backbtn = document.getElementById('volver')
 fetch('../PHP/sessioncheck.php')
 .then(res => res.json())
 .then(ans =>{
@@ -33,4 +34,7 @@ form.addEventListener('submit', e =>{
         h3.innerHTML = 'Error 500'
         h3.className = 'bad'
     })
+})
+backbtn.addEventListener('click', e=>{
+    window.history.back()
 })

@@ -38,7 +38,7 @@
             <td><?php echo $show['Description']; ?></td>
         </tr>
         <?php } ?>
-        <a href="../tables/?city=CDMX"><button type="button">Volver</button></a>
+        <button type="button" id="volver"></button>
     </table>
 </body>
 <script src="secureacces.js"></script>

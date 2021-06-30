@@ -2,10 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 
-session_start();
-if(!(isset($_SESSION['mail']))){
-    header('Location:../');
-}
 function hasA($string){
     $prove = false;//explode
     $arr = explode(" ",$string);
@@ -25,7 +21,7 @@ function hasA($string){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styleNC.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Nuevo</title>
 </head>
 <body>
@@ -39,28 +35,28 @@ function hasA($string){
         <option value="SJD">SJD</option>
         <option value="QRO">QRO</option>
     </select><br>
-    <label>Fecha de carga</label><input type="date" name="FechaC">
-    <label>Hora de carga</label><input type="text" name="HoraC">
-    <label>Fecha de entrega</label><input type="date" name="FechaE">
-    <label>Hora de entrega</label><input type="text" name="HoraE">
-    <label>Dirección de entrega</label><input type="text" name="DireccionE">
-    <label>Razón social</label><input type="text" name="RazonS">
-    <label>Datos de contacto</label><input type="text" name="DatosC">
-    <label>SO</label><input type="text" name="SO">
-    <label>Factura</label><input type="text" name="Factura">
-    <label>Numero de piezas</label><input type="text" name="NumeroP">
-    <label>Numero de cajas</label><input type="text" name="NumeroC">
-    <label>Numero de Tarimas</label><input type="text" name="NumeroT">
-    <label>Tipo de transporte</label><input type="text" name="TipoT">
-    <label>Placas</label><input type="text" name="pla">
-    <label>Operador</label><input type="text" name="Operador">
-    <label>Maniobrista</label><input type="text" name="Maniobrista">
-    <label>Custodia</label><input type="text" name="Custodia">
-    <label>Hora de salida con custodia</label><input type="text" name="HoraSCC">
-    <label>Observaciones</label><input type="text" name="Observaciones">
-    <input type="submit" value="Guardar">
-    <a href="../tables/?city=CDMX"><button type="button">Regresar</button></a>
-    <button type="button" id="duplicate">Duplicar</button>
+    <div class="info"><label>Fecha de carga</label><input type="date" name="FechaC"></div>
+    <div class="info"><label>Hora de carga</label><input type="text" name="HoraC"></div>
+    <div class="info"><label>Fecha de entrega</label><input type="date" name="FechaE"></div>
+    <div class="info"><label>Hora de entrega</label><input type="text" name="HoraE"></div>
+    <div class="info"><label>Dirección de entrega</label><input type="text" name="DireccionE"></div>
+    <div class="info"><label>Razón social</label><input type="text" name="RazonS"></div>
+    <div class="info"><label>Datos de contacto</label><input type="text" name="DatosC"></div>
+    <div class="info"><label>SO</label><br><input type="text" name="SO"></div>
+    <div class="info"><label>Factura</label><br><input type="text" name="Factura"></div>
+    <div class="info"><label>Numero de piezas</label><input type="text" name="NumeroP"></div>
+    <div class="info"><label>Numero de cajas</label><input type="text" name="NumeroC"></div>
+    <div class="info"><label>Numero de Tarimas</label><input type="text" name="NumeroT"></div>
+    <div class="info"><label>Tipo de transporte</label><input type="text" name="TipoT"></div>
+    <div class="info"><label>Placas</label><br><input type="text" name="pla"></div>
+    <div class="info"><label>Operador</label><br><input type="text" name="Operador"></div>
+    <div class="info"><label>Maniobrista</label><input type="text" name="Maniobrista"></div>
+    <div class="info"><label>Custodia</label><br><input type="text" name="Custodia"></div>
+    <div class="info"><label>Hora de salida con custodia</label><input type="text" name="HoraSCC"></div>
+    <div class="info"><label>Observaciones</label><input type="text" name="Observaciones"></div>
+    <div class="info"><input type="submit" value="Guardar"></div>
+    <div class="info"><button type="button" id="volver">Volver</button></div>
+    <div class="info"><button type="button" id="duplicate">Duplicar</button></div>
     <h3 id="res"></h3>
     </form>
     <section id="main">

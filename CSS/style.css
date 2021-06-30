@@ -43,6 +43,7 @@ button{
     width: 80%;
     padding: 10px;
     margin-left: 50px;
+    margin-top: 10px;
     background-color:black;
     border: none;
     transition: all 0.4s linear;
@@ -77,4 +78,7 @@ h3{
 }
 .option{
     background-color: black;
+}
+.info{
+    margin-top: 20px;
 }

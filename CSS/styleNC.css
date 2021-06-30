@@ -11,3 +11,17 @@ input{
     margin: 10px;
     width: 80%;
 }
+.info{
+    width: 90%;
+    margin-left: 60px;
+}
+input[type="submit"]{
+    background-color: black;
+    border:none;
+    color: white;
+    transition: all 0.4s linear;
+}
+button{
+    width: 80%;
+    margin-left: 10px;
+}

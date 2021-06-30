@@ -24,41 +24,41 @@
     $terminado = implode(mysqli_fetch_assoc($resT));
     while($show = mysqli_fetch_array($res)){
     ?>
-    <label>Fecha de carga</label><input type="date" name="FechaC" value="<?php echo $show['FechaC'] ?>">
-    <label>Hora de carga</label><input type="text" name="HoraC" value="<?php echo $show['HoraC'] ?>">
-    <label>Fecha de entrega</label><input type="date" name="FechaE" value="<?php echo $show['FechaC'] ?>">
-    <label>Hora de entrega</label><input type="text" name="HoraE" value="<?php echo $show['HoraE'] ?>">
-    <label>Dirección de entrega</label><input type="text" name="DireccionE" value="<?php echo $show['DireccionE']?>">
-    <label>Razón social</label><input type="text" name="RazonS" value="<?php echo $show['RazonS'] ?>">
-    <label>Datos de contacto</label><input type="text" name="DatosC" value="<?php echo $show['DatosC'] ?>">
-    <label>SO</label><input type="text" name="SO" value="<?php echo $show['SO'] ?>">
-    <label>Factura</label><input type="text" name="Factura" value="<?php echo $show['Factura'] ?>">
-    <label>Numero de piezas</label><input type="text" name="NumeroP" value="<?php echo $show['NumeroP']?>">
-    <label>Numero de cajas</label><input type="text" name="NumeroC" value="<?php echo $show['NumeroC']?>">
-    <label>Numero de Tarimas</label><input type="text" name="NumeroT" value="<?php echo $show['NumeroT']?>">
-    <label>Tipo de transporte</label><input type="text" name="TipoT" value="<?php echo $show['TipoT']?>">
-    <label>Placas</label><input type="text" name="Placas" value="<?php echo $show['Placas']?>">
-    <label>Operador</label><input type="text" name="Operador" value="<?php echo $show['Operador']?>">
-    <label>Maniobrista</label><input type="text" name="Maniobrista" value="<?php echo $show['Maniobrista']?>">
-    <label>Custodia</label><input type="text" name="Custodia" value="<?php echo $show['Custodia']?>">
-    <label>Hora de salida con custodia</label><input type="text" name="HoraSCC" value="<?php echo $show['HoraSCC']?>">
-    <label>Observaciones</label><input type="text" name="Observaciones" value="<?php echo $show['Observaciones']?>">
-    <input type="hidden" name="id" value="<?php echo $id ?>">
-    <input type="hidden" name="Zona" value="<?php echo $city ?>">
+    <div class="info"><label>Fecha de carga</label><input type="date" name="FechaC" value="<?php echo $show['FechaC'] ?>"></div>
+    <div class="info"><label>Hora de carga</label><input type="text" name="HoraC" value="<?php echo $show['HoraC'] ?>"></div>
+    <div class="info"><label>Fecha de entrega</label><input type="date" name="FechaE" value="<?php echo $show['FechaC'] ?>"></div>
+    <div class="info"><label>Hora de entrega</label><input type="text" name="HoraE" value="<?php echo $show['HoraE'] ?>"></div>
+    <div class="info"><label>Dirección de entrega</label><input type="text" name="DireccionE" value="<?php echo $show['DireccionE']?>"></div>
+    <div class="info"><label>Razón social</label><input type="text" name="RazonS" value="<?php echo $show['RazonS'] ?>"></div>
+    <div class="info"><label>Datos de contacto</label><input type="text" name="DatosC" value="<?php echo $show['DatosC'] ?>"></div>
+    <div class="info"><label>SO</label><br><input type="text" name="SO" value="<?php echo $show['SO'] ?>"></div>
+    <div class="info"><label>Factura</label><br><input type="text" name="Factura" value="<?php echo $show['Factura'] ?>"></div>
+    <div class="info"><label>Numero de piezas</label><input type="text" name="NumeroP" value="<?php echo $show['NumeroP']?>"></div>
+    <div class="info"><label>Numero de cajas</label><input type="text" name="NumeroC" value="<?php echo $show['NumeroC']?>"></div>
+    <div class="info"><label>Numero de Tarimas</label><input type="text" name="NumeroT" value="<?php echo $show['NumeroT']?>"></div>
+    <div class="info"><label>Tipo de transporte</label><input type="text" name="TipoT" value="<?php echo $show['TipoT']?>"></div>
+    <div class="info"><label>Placas</label><br><input type="text" name="Placas" value="<?php echo $show['Placas']?>"></div>
+    <div class="info"><label>Operador</label><br><input type="text" name="Operador" value="<?php echo $show['Operador']?>"></div>
+    <div class="info"><label>Maniobrista</label><input type="text" name="Maniobrista" value="<?php echo $show['Maniobrista']?>"></div>
+    <div class="info"><label>Custodia</label><br><input type="text" name="Custodia" value="<?php echo $show['Custodia']?>"></div>
+    <div class="info"><label>Hora de salida con custodia</label><input type="text" name="HoraSCC" value="<?php echo $show['HoraSCC']?>"></div>
+    <div class="info"><label>Observaciones</label><input type="text" name="Observaciones" value="<?php echo $show['Observaciones']?>"></div>
+    <div class="info"><input type="hidden" name="id" value="<?php echo $id ?>"></div>
+    <div class="info"><input type="hidden" name="Zona" value="<?php echo $city ?>"></div>
     <?php 
     }
     if($terminado === 0){
     ?>
-    <input type="submit" value="Guardar">
+    <div class="info"><input type="submit" value="Guardar"></div>
     <?php 
     }else{
     ?>
     <?php 
     if($nivel > 5){
     ?>
-    <input type="submit" value="Guardar">
+    <div class="info"><input type="submit" value="Guardar"></div>
     <?php }}?>
-    <a href="../tables/?city=CDMX"><button type="button">Volver</button></a>  
+    <div class="info"><button type="button" id="volver">Volver</button></div> 
     <h3 id="res"></h3>
 </form>
 <script src="editar.js"></script>
