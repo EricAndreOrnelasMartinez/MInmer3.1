@@ -14,7 +14,7 @@ ini_set('display_errors','1');
 <body>
 <form enctype="multipart/form-data" method="post">
 <h4>El nombre la evidencia debe ser el número de factura</h4>    
-    Subir Evidencia PDF: <input type="file" name="archivo">
+    Subir Evidencia PDF: <input type="file" name="archivo[]">
         <input type="submit" value="Subir">
         <a href="../?city=CDMX"><button type="button">Volver</button></a>
     </form>
@@ -26,6 +26,7 @@ ini_set('display_errors','1');
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 $city = $_GET['city'];
+if(isset($_FILES['archivo']['tmp_name'])){
     for($_FILES['archivo']['tmp_name'] as $key => $tmp_name){
         if($_FILES['archivo']['tmp_name'][$key]){
             $source = $_FILES['myfile']['tmp_name'];
