@@ -10,7 +10,7 @@
 <body>
 <form enctype="multipart/form-data" method="post">
 <h4>El nombre la evidencia debe ser el número de factura</h4>    
-    Subir Evidencia PDF: <input type="file" name="myfile">
+    Subir Evidencia PDF: <input type="file" name="archivo">
         <input type="submit" value="Subir">
         <a href="../?city=CDMX"><button type="button">Volver</button></a>
     </form>
@@ -22,24 +22,18 @@
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 $city = $_GET['city'];
-if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name']) && !empty($_FILES['myfile']['tmp_name'])){
-    if(!is_uploaded_file($_FILES['myfile']['tmp_name'])){
-        echo "Error: el fichero no fue procesado correctamente";
+    for($_FILES['archivo']['tmp_name'] as $key => $tmp_name){
+        if($_FILES['archivo']['tmp_name'][$key]){
+            $source = $_FILES['myfile']['tmp_name'];
+            $destination = __DIR__.'/'."$city".'/'.$_FILES['myfile']['name'];
+            if(move_uploaded_file($source, $destination)){
+                echo "Los archivos fueron subidos con exito!";
+            }else{
+                echo "hubo un error al subir los archivos";
+            }
+        }
     }
 
-    $source = $_FILES['myfile']['tmp_name'];
-    $destination = __DIR__.'/'."$city".'/'.$_FILES['myfile']['name'];
-
-    if( is_file($destination)){
-        echo "Error: fichero existente";
-        @unlink(ini_get('upload_tmp_dir').$_FILES['myfile']['tmp_name']);
-        exit;
-    }
-    if( ! @move_uploaded_file($source, $destination)){
-        echo "Error: el fichero no se pudo mover a la carpeta destino ||   ".$destination;
-        @unlink(ini_get('upload_tmp_dir').$_FILES['myfile']['tmp_name']);
-        exit;
-    }
 }
    
 ?>
