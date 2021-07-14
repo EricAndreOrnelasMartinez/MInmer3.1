@@ -1,3 +1,6 @@
+<?php 
+$city = $_GET['city'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +11,7 @@
     <title>Upload</title>
 </head>
 <body>
-<form enctype="multipart/form-data" method="post" action="files.php">
+<form enctype="multipart/form-data" method="post" action="files.php?city=<?php echo $city ?>">
 <h4>El nombre la evidencia debe ser el número de factura</h4>    
     Subir Evidencia PDF: <input type="file" name="archivo[]" id="archivo[]" multiple="">
         <input type="submit" value="Subir">
