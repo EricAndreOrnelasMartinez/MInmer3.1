@@ -1,6 +1,4 @@
 <?php 
-error_reporting(E_ALL);
-ini_set('display_errors','1');
 echo "todo bien";
 $city = $_GET['city'];
 if(isset($_FILES['archivo']['tmp_name'])){
