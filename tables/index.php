@@ -194,7 +194,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             <td><input type="text" name="Zona" value="<?php echo $show['NumeroC']?>"></td>
             <td><input type="text" name="Zona" value="<?php echo $show['NumeroT']?>"></td>
             <td><input type="text" name="Zona" value="<?php echo $show['TipoT']?>"></td>
-            <td><input type="text" name="Zona" value="<?php echo $show['Placas']?>">/td>
+            <td><input type="text" name="Zona" value="<?php echo $show['Placas']?>"></td>
             <td><input type="text" name="Zona" value="<?php echo $show['Operador']?>"></td>
             <td><input type="text" name="Zona" value="<?php echo $show['Maniobrista']?>"></td>
             <td><input type="text" name="Zona" value="<?php echo $show['Custodia']?>"></td>
@@ -207,7 +207,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             if($aux >= 3){ 
             ?>
             </form>
-             <td><button type="button" onclick="updateP('<?php echo $show['ID_SQL'] ?>tr')"></button></td>
+             <td><button type="button" onclick="updateP('<?php echo $show['ID_SQL'] ?>tr')">Guardar</button></td>
              <td><button type="button" onclick="deleteP(<?php echo $show['ID_SQL'] ?>)">Eliminar</button> <form id="<?php echo $show['ID_SQL'] ?>">
              <input type="hidden" name="id" value="<?php echo $show['ID_SQL']?>">
              <input type="hidden" name="city" value="<?php echo $city ?>">
