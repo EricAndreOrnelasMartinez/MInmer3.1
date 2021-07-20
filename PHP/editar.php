@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $mail = $_SESSION['mail'];
-$id = $_POST['id'];
+$id = $_POST['ID_SQL'];
 $Zona = $_POST['Zona'];
 require_once('dbcon.php');
 $FechaC = $_POST['FechaC'];
