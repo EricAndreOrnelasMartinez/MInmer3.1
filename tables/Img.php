@@ -1,10 +1,7 @@
 <?php 
 
-require_once('../PHP/dbcon.php');
 header('Content-type: image/png');
 
-$id = $_GET['id'];
-$city = $_GET['city'];
 $txt = "Holaaaaaa!!!, funcionaaaa!!";
 
 $img = @imagecreate(500, 500);
