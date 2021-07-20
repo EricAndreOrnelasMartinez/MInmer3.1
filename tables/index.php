@@ -186,7 +186,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             <td><input type="text" name="FechaE" value="<?php echo $show['FechaE']?>"></td>
             <td><input type="text" name="HoraE" value="<?php echo $show['HoraE']?>"></td>
             <td><input type="text" name="DireccionE" value="<?php echo $show['DireccionE']?>"></td>
-            <td><input type="text" name="RasonS" value="<?php echo $show['RazonS']?>"></td>
+            <td><input type="text" name="RazonS" value="<?php echo $show['RazonS']?>"></td>
             <td><input type="text" name="DatosC" value="<?php echo $show['DatosC']?>"></td>
             <td><input type="text" name="SO" value="<?php echo $show['SO']?>"></td>
             <td><input type="text" name="Factura" value="<?php echo $show['Factura']?>"></td>
