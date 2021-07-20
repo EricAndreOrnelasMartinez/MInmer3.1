@@ -224,7 +224,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             }
             ?>  
             <td>
-            <a download="img" href="Img.php?id=<?php echo show['ID_SQL'] ?>&city=<?php echo $show['Zona'] ?>"><button type="button">Ver Imagen</button></a>
+            <a href="show.php?id=<?php echo show['ID_SQL'] ?>&city=<?php echo $show['Zona'] ?>"><button type="button">Ver Imagen</button></a>
     </tr>
         <?php }?>
         </table>
