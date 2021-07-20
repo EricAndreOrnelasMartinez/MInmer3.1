@@ -200,7 +200,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             <td><input type="text" name="Custodia" value="<?php echo $show['Custodia']?>"></td>
             <td><input type="text" name="HoraSCC" value="<?php echo $show['HoraSCC']?>"></td>
             <td><input type="text" name="Observaciones" value="<?php echo $show['Observaciones']?>"></td>
-            <input type="hidden" name="ID_SQL" value="<?php $show['ID_SQL'] ?>">
+            <input type="hidden" name="ID_SQL" value="<?php echo $show['ID_SQL'] ?>">
             <td><a href="./Evidencias/<?php echo $city ?>/<?php echo $show['Factura'] ?>.pdf"><img src="./link.png"  width="30"></a></td>
             <td><?php echo $show['Terminado'] ?></td>
             <?php
