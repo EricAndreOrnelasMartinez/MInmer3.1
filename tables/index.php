@@ -177,35 +177,37 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                 $color = "green";
             }
         ?>
+    <form id="<?php echo $show['ID_SQL'] ?>tr">
     <tr class="<?php echo $color ?>">
             <td><?php echo $total ?>%</td>
-            <td><?php echo $show['Zona'] ?></td>
-            <td><?php echo $show['FechaC'] ?></td>
-            <td><?php echo $show['HoraC'] ?></td>
-            <td><?php echo $show['FechaE'] ?></td>
-            <td><?php echo $show['HoraE'] ?></td>
-            <td><?php echo $show['DireccionE'] ?></td>
-            <td><?php echo $show['RazonS'] ?></td>
-            <td><?php echo $show['DatosC'] ?></td>
-            <td><?php echo $show['SO'] ?></td>
-            <td><?php echo $show['Factura'] ?></td>
-            <td><?php echo $show['NumeroP'] ?></td>
-            <td><?php echo $show['NumeroC'] ?></td>
-            <td><?php echo $show['NumeroT'] ?></td>
-            <td><?php echo $show['TipoT'] ?></td>
-            <td><?php echo $show['Placas'] ?></td>
-            <td><?php echo $show['Operador'] ?></td>
-            <td><?php echo $show['Maniobrista'] ?></td>
-            <td><?php echo $show['Custodia'] ?></td>
-            <td><?php echo $show['HoraSCC'] ?></td>
-            <td><?php echo $show['Observaciones'] ?></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['Zona']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['FechaC']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['HoraC']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['FechaE']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['HoraE']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['DireccionE']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['RazonS']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['DatosC']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['SO']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['Factura']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['NumeroP']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['NumeroC']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['NumeroT']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['TipoT']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['Placas']?>">/td>
+            <td><input type="text" name="Zona" value="<?php echo $show['Operador']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['Maniobrista']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['Custodia']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['HoraSCC']?>"></td>
+            <td><input type="text" name="Zona" value="<?php echo $show['Observaciones']?>"></td>
             <td><a href="./Evidencias/<?php echo $city ?>/<?php echo $show['Factura'] ?>.pdf"><img src="./link.png"  width="30"></a></td>
             <td><?php echo $show['Terminado'] ?></td>
             <?php
             $aux = $_SESSION['nivel'];
             if($aux >= 3){ 
             ?>
-             <td><a href="../Editar/?ids=<?php echo $show['ID_SQL']; ?>&city=<?php echo $city ?>"><button type="button" class="btn btn-succes">Modificar</button></a></td>
+            </form>
+             <td><button type="button" onclick="updateP('<?php echo $show['ID_SQL'] ?>tr')"></button></td>
              <td><button type="button" onclick="deleteP(<?php echo $show['ID_SQL'] ?>)">Eliminar</button> <form id="<?php echo $show['ID_SQL'] ?>">
              <input type="hidden" name="id" value="<?php echo $show['ID_SQL']?>">
              <input type="hidden" name="city" value="<?php echo $city ?>">

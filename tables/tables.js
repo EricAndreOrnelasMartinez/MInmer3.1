@@ -53,6 +53,26 @@ function finishP(id){
 
 }
 
+function updateP(id){
+    let info = document.getElementById(id)
+    let data = new FormData(info)
+    aux = confirm('¿Seguro que desea realizar estos cambios?')
+    if(aux){
+        fetch('../PHP/editar.php',{
+            method: 'POST',
+            body: data
+        })
+        .then(res => res.json())
+        .then(dataF =>{
+            if(dataF === '1'){
+                alert('Completado!')
+            }else{
+                alert(dataF)
+            }
+        })
+    }
+}
+
 function copytoclip(id){
     let text = document.getElementById(id)
     text.select();
