@@ -1,6 +1,6 @@
 <?php 
 
-header('Content-type: image/png');
+header("Content-Type: image/png");
 
 $txt = "Holaaaaaa!!!, funcionaaaa!!";
 
