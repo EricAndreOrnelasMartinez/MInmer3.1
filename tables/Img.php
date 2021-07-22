@@ -1,14 +1,10 @@
-<?php 
-
+<?php
 header("Content-Type: image/png");
-
-$txt = "Holaaaaaa!!!, funcionaaaa!!";
-
-$img = @imagecreate(500, 500) or die("no se puede inicializar la cadena");
-$backgroud = imagecolorallocate($img, 220, 109, 0);
-$textcolor = imagecolorallocate($img, 255,255,255);
-imagestring($img, 10,0,0,$txt, $textcolor);
-imagepng($img);
-imagedestroy($img);
-
+$im = @imagecreate(110, 20)
+    or die("Cannot Initialize new GD image stream");
+$color_fondo = imagecolorallocate($im, 0, 0, 0);
+$color_texto = imagecolorallocate($im, 233, 14, 91);
+imagestring($im, 1, 5, 5,  "A Simple Text String", $color_texto);
+imagepng($im);
+imagedestroy($im);
 ?>
