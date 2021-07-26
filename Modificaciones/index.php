@@ -38,8 +38,9 @@
             <td><?php echo $show['Description']; ?></td>
         </tr>
         <?php } ?>
-        <button type="button" id="volver"></button>
+        <button type="button" id="volver">Volver</button>
     </table>
 </body>
+<script src="modificaciones.js"></script>
 <script src="secureacces.js"></script>
 </html>
