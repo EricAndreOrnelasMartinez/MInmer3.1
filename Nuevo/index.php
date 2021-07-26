@@ -96,7 +96,7 @@ if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name'
     echo $_FILES['myfile']['name'];
     include('XLSX.php');
     readAndC($_FILES['myfile']['name']);
-    if(headers_sent()){
+    if(!headers_sent()){
         foreach(headers_list() as $header){
             header_remove($header);
         }
