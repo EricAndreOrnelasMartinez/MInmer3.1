@@ -5,7 +5,7 @@ $city = $_GET['city'];
         if($_FILES['archivo']['tmp_name'][$key]){
             $source = $_FILES['myfile']['tmp_name'][$key];
             $destination = __DIR__.'/'.$city.'/'.$_FILES['myfile']['name'][$key];
-            if(@move_uploaded_file($source, $destination)){
+            if(move_uploaded_file($source, $destination)){
                 echo "Los archivos fueron subidos con exito!";
             }else{
                 echo "hubo un error al subir los archivos";
