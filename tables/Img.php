@@ -4,8 +4,8 @@ $con = mysqli_connect("localhost","root","Lasric.2018","Minmer2");
 $txt = '';
 $city = $_GET['city'];
 $op = $_GET['op'];
-// $sql = "SELECT * FROM $city WHERE Operador='$op'";
-// $res = mysqli_query($con, $sql);
+$sql = "SELECT * FROM $city WHERE Operador='$op'";
+$res = mysqli_query($con, $sql);
 // if($res){
 //     $he = 400;
 //     while($show = mysqli_fetch_array($ans)){
