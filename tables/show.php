@@ -1,3 +1,7 @@
+<?php 
+$city = $_GET['city'];
+$op = $_GET['op'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,6 @@
     <title>Imagen</title>
 </head>
 <body>
-    <img src="./Img.php">
+    <img src="./Img.php?op=<?php echo $op ?>&city=<?php echo $city ?>">
 </body>
 </html>
