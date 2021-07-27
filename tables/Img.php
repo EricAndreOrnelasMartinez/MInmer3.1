@@ -15,7 +15,7 @@ if($res){
         $color_fondo = imagecolorallocate($im, 0, 0, 0);
         $color_texto = imagecolorallocate($im, 233, 14, 91);
         imagettftext($im, 25, 5, 5, "Zona: ".$show['Zona'] , $color_texto);
-        imagettftext($im, 25, 5, 5, "Fecha de carga: ".$show['FechaC'] , $color_texto);
+        imagettftext($im, 25, 5, 450, "Fecha de carga: ".$show['FechaC'] , $color_texto);
         imagepng($im);
         imagedestroy($im);
     }
