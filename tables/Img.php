@@ -7,17 +7,17 @@ $op = $_GET['op'];
 $sql = "SELECT * FROM $city WHERE Operador='$op'";
 $res = mysqli_query($con, $sql);
 if($res){
-    $he = 400;
+    $he = 5;
     while($show = mysqli_fetch_array($res)){
-        $txt = $txt + "Zona: ".$show['Zona'].PHP_EOL."Fecha de carga: ".$show['FechaC'].PHP_EOL."Hora de carga: ".$show['HoraC'].PHP_EOL."Fecha de entrega: ".$show['FechaE'].PHP_EOL."Hora de entrega: ".$show['HoraE'].PHP_EOL."Dirección de entrega: ".$show['DireccionE'].PHP_EOL."Razón social: ".$show['RazonS'].PHP_EOL."Datos del contacto: ".$show['DatosC'].PHP_EOL."SO: ".$show['SO'].PHP_EOL."Factura: ".$show['Factura'].PHP_EOL."Número de piezas: ".$show['NumeroP'].PHP_EOL."Número de cajas: ".$show['NumeroC'].PHP_EOL."Número de tarimas: ".$show['NumeroT'].PHP_EOL."Tipo de unidad: ".$show['TipoT'].PHP_EOL."Placas: ".$show['Placas'].PHP_EOL."Operador: ".$show['Operador'].PHP_EOL."Maniobrista: ".$show['Maniobrista'].PHP_EOL."Custodia: ".$show['Custodia'].PHP_EOL."Hora de salida con custodia: ".$show['HoraSCC'].PHP_EOL."Observaciones: ".$show['Observaciones'];    
+        $txt = $txt + "Zona: ".$show['Zona']."  Fecha de carga: ".$show['FechaC']."  Hora de carga: ".$show['HoraC']."  Fecha de entrega: ".$show['FechaE']."  Hora de entrega: ".$show['HoraE']."  Dirección de entrega: ".$show['DireccionE']."  Razón social: ".$show['RazonS']."  Datos del contacto: ".$show['DatosC']."  SO: ".$show['SO']."  Factura: ".$show['Factura']."  Número de piezas: ".$show['NumeroP']."  Número de cajas: ".$show['NumeroC']."  Número de tarimas: ".$show['NumeroT']."  Tipo de unidad: ".$show['TipoT']."  Placas: ".$show['Placas']."  Operador: ".$show['Operador']."  Maniobrista: ".$show['Maniobrista']."  Custodia: ".$show['Custodia']."  Hora de salida con custodia: ".$show['HoraSCC']."  Observaciones: ".$show['Observaciones'];    
         $he = $he + 50;
+        $im = @imagecreate(1300, 40);
+        $color_fondo = imagecolorallocate($im, 0, 0, 0);
+        $color_texto = imagecolorallocate($im, 233, 14, 91);
+        imagestring($im, 30, 5, $he, $txt , $color_texto);
+        imagepng($im);
+        imagedestroy($im);
     }
-    $im = @imagecreate(400, $he);
-    $color_fondo = imagecolorallocate($im, 0, 0, 0);
-    $color_texto = imagecolorallocate($im, 233, 14, 91);
-    imagestring($im, 25, 5, 5, $txt , $color_texto);
-    imagepng($im);
-    imagedestroy($im);
 }else{
     $im = @imagecreate(110, 20);
     $color_fondo = imagecolorallocate($im, 0, 0, 0);
