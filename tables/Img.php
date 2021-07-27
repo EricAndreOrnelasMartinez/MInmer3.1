@@ -14,7 +14,7 @@ if($res){
         $im = @imagecreate(1300, 40);
         $color_fondo = imagecolorallocate($im, 0, 0, 0);
         $color_texto = imagecolorallocate($im, 233, 14, 91);
-        imagestring($im, 30, 5, $he, $txt , $color_texto);
+        imagestring($im, 30, $he, 5, $txt , $color_texto);
         imagepng($im);
         imagedestroy($im);
     }
