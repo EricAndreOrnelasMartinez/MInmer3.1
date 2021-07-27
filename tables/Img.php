@@ -1,6 +1,6 @@
 <?php
-require_once('../PHP/dbcon.php');
 header("Content-Type: image/png");
+$con = mysqli_connect("localhost","root","Lasric.2018","Minmer2");
 $txt = '';
 $city = $_GET['city'];
 $op = $_GET['op'];
