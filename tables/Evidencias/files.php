@@ -1,7 +1,7 @@
 <?php 
 echo "todo bien";
 $city = $_GET['city'];
-    for($_FILES['archivo']['tmp_name'] as $key => $tmp_name){
+    foreach($_FILES['archivo']['tmp_name'] as $key => $tmp_name){
         // if($_FILES['archivo']['tmp_name'][$key]){
         //     $source = $_FILES['myfile']['tmp_name'];
         //     $destination = __DIR__.'/'.$city.'/'.$_FILES['myfile']['name'];
