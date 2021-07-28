@@ -9,10 +9,10 @@ $res = mysqli_query($con, $sql);
 if($res){
     $he = 400;
     while($show = mysqli_fetch_array($res)){
-        $im = @imagecreate(2500, 100);
+        $im = @imagecreate(2300, 100);
         $color_fondo = imagecolorallocate($im, 0, 0, 0);
         $color_texto = imagecolorallocate($im, 233, 14, 91);
-        imagestring($im, 100, 5, 5, "Zona: ".$show['Zona']." Fecha de carga: ".$show['FechaC']." Hora de carga: ".$show['HoraC']." Fecha de entrega: ".$show['FechaE']." Hora de entrega: ".$show['HoraE']." Direccion de entrega: ".$show['DireccionE']." Datos de contacto: ".$show['DatosC']." Factura: ".$show['Factura'] , $color_texto);
+        imagestring($im, 300, 5, 5, "Zona: ".$show['Zona']." Fecha de carga: ".$show['FechaC']." Hora de carga: ".$show['HoraC']." Fecha de entrega: ".$show['FechaE']." Hora de entrega: ".$show['HoraE']." Direccion de entrega: ".$show['DireccionE']." Datos de contacto: ".$show['DatosC']." Factura: ".$show['Factura'] , $color_texto);
         imagepng($im);
         imagedestroy($im);
     }
