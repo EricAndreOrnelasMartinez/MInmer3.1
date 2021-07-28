@@ -4,7 +4,7 @@ $con = mysqli_connect("localhost","root","Lasric.2018","Minmer2");
 $txt = '';
 $city = $_GET['city'];
 $id = $_GET['ID_SQL'];
-$sql = "SELECT * FROM $city WHERE ID_SQL='$op'";
+$sql = "SELECT * FROM $city WHERE ID_SQL='$id'";
 $res = mysqli_query($con, $sql);
 if($res){
     $he = 400;
