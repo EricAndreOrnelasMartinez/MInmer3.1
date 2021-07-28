@@ -11,6 +11,6 @@ $id = $_GET['ID_SQL'];
     <title>Imagen</title>
 </head>
 <body>
-    <img src="./Img.php?ID_SQL=<?php echo $op ?>&city=<?php echo $city ?>">
+    <img src="./Img.php?ID_SQL=<?php echo $id ?>&city=<?php echo $city ?>">
 </body>
 </html>
