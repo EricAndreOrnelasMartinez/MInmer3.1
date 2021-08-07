@@ -13,6 +13,7 @@
     $con = mysqli_connect("localhost","root","Lasric.2018","Minmer2"); ?>
 </head>
 <body>
+    <section>
     <table>
         <thead>
             <tr>
@@ -40,6 +41,7 @@
         <?php } ?>
         <button type="button" id="volver">Volver</button>
     </table>
+    </section>
 </body>
 <script src="modificaciones.js"></script>
 <script src="secureacces.js"></script>

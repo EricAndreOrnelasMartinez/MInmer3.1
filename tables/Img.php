@@ -12,8 +12,8 @@ if($res){
         $im = @imagecreate(2300, 100);
         $color_fondo = imagecolorallocate($im, 0, 0, 0);
         $color_texto = imagecolorallocate($im, 233, 14, 91);
-        //imagestring($im, 800, 5, 20, "Zona: ".$show['Zona']." Fecha de carga: ".$show['FechaC']." Hora de carga: ".$show['HoraC']." Fecha de entrega: ".$show['FechaE']." Hora de entrega: ".$show['HoraE']." Direccion de entrega: ".$show['DireccionE']." Datos de contacto: ".$show['DatosC']." Factura: ".$show['Factura'] , $color_texto);
-        imagettftext($im,60,0, 5,20, $color_texto,'arial.ttf', "Zona: ".$show['Zona']." Fecha de carga: ".$show['FechaC']." Hora de carga: ".$show['HoraC']." Fecha de entrega: ".$show['FechaE']." Hora de entrega: ".$show['HoraE']." Direccion de entrega: ".$show['DireccionE']." Datos de contacto: ".$show['DatosC']." Factura: ".$show['Factura'] );
+        imagestring($im, 800, 5, 20, "Zona: ".$show['Zona']." Fecha de carga: ".$show['FechaC']." Hora de carga: ".$show['HoraC']." Fecha de entrega: ".$show['FechaE']." Hora de entrega: ".$show['HoraE']." Direccion de entrega: ".$show['DireccionE']." Datos de contacto: ".$show['DatosC']." Factura: ".$show['Factura'] , $color_texto);
+        //imagettftext($im,60,0, 5,20, $color_texto,'arial.ttf', "Zona: ".$show['Zona']." Fecha de carga: ".$show['FechaC']." Hora de carga: ".$show['HoraC']." Fecha de entrega: ".$show['FechaE']." Hora de entrega: ".$show['HoraE']." Direccion de entrega: ".$show['DireccionE']." Datos de contacto: ".$show['DatosC']." Factura: ".$show['Factura'] );
         imagepng($im);
         imagedestroy($im);
     }
