@@ -18,6 +18,7 @@ $city = $_GET['city'];
         <a href="../?city=CDMX"><button type="button">Volver</button></a>
     </form>
 </body>
+<script src="Evidencias.js"></script>
 <script src="../JS/session.js"></script>
 <script src="../JS/secuereacces.js"></script>
 </html>
