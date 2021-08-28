@@ -12,13 +12,13 @@ $city = $_GET['city'];
 </head>
 <body>
 <form enctype="multipart/form-data" method="post" action="files.php?city=<?php echo $city ?>">
-<h4>El nombre la evidencia debe ser el número de factura</h4>    
-    Subir Evidencia PDF: <input type="file" name="archivo[]" class="archivo" id="archivo[]" multiple="">
+<h4>El nombre la evidencia debe ser el número de factura</h4> 
+    <h4>Evidencia para <?php echo $city ?></h4>
+    Subir Evidencia PDF: <input type="file" name="archivo[]" id="archivo[]" multiple="">
         <input type="submit" value="Subir">
         <a href="../?city=CDMX"><button type="button">Volver</button></a>
     </form>
 </body>
-<script src="Evidencias.js"></script>
 <script src="../../JS/session.js"></script>
 <script src="../../JS/secuereacces.js"></script>
 </html>
