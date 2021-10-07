@@ -190,15 +190,15 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             <td><input type="text" name="DatosC" value="<?php echo $show['DatosC']?>"></td>
             <td><input type="text" name="SO" value="<?php echo $show['SO']?>"></td>
             <td><input type="text" name="Factura" value="<?php echo $show['Factura']?>"></td>
-            <td><input type="text" name="NumeroP" value="<?php echo $show['NumeroP']?>"></td>
-            <td><input type="text" name="NumeroC" value="<?php echo $show['NumeroC']?>"></td>
-            <td><input type="text" name="NumeroT" value="<?php echo $show['NumeroT']?>"></td>
+            <td><input type="number" name="NumeroP" value="<?php echo $show['NumeroP']?>"></td>
+            <td><input type="number" name="NumeroC" value="<?php echo $show['NumeroC']?>"></td>
+            <td><input type="number" name="NumeroT" value="<?php echo $show['NumeroT']?>"></td>
             <td><input type="text" name="TipoT" value="<?php echo $show['TipoT']?>"></td>
             <td><input type="text" name="Placas" value="<?php echo $show['Placas']?>"></td>
             <td><input type="text" name="Operador" value="<?php echo $show['Operador']?>"></td>
             <td><input type="text" name="Maniobrista" value="<?php echo $show['Maniobrista']?>"></td>
             <td><input type="text" name="Custodia" value="<?php echo $show['Custodia']?>"></td>
-            <td><input type="text" name="HoraSCC" value="<?php echo $show['HoraSCC']?>"></td>
+            <td><input type="time" name="HoraSCC" value="<?php echo $show['HoraSCC']?>"></td>
             <td><input type="text" name="Observaciones" value="<?php echo $show['Observaciones']?>"></td>
             <input type="hidden" name="ID_SQL" value="<?php echo $show['ID_SQL'] ?>">
             <td><a href="./Evidencias/<?php echo $city ?>/<?php echo $show['Factura'] ?>.pdf"><img src="./link.png"  width="30"></a></td>
