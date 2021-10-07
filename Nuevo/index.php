@@ -61,6 +61,19 @@ function hasA($string){
     </form>
     <section id="main">
     </section>
+    <form action="index.php" method="get">
+        <select name="moth">
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+        </select>
+        <select name="year">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+        </select>
+    </form>
     <form enctype="multipart/form-data" method="post">
         Subir registro exel: <input type="file" name="myfile">
         <input type="submit" value="Subir">
@@ -72,6 +85,9 @@ function hasA($string){
 <?php 
 // error_reporting(E_ALL);
 // ini_set('display_errors','1');
+if(isset($_GET['moth'])){
+$moth = $_GET['moth']; 
+$year = $_GET['year'];
 if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name']) && !empty($_FILES['myfile']['tmp_name'])){
     if(!is_uploaded_file($_FILES['myfile']['tmp_name'])){
         echo "Error: el fichero no fue procesado correctamente";
@@ -90,17 +106,16 @@ if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name'
         @unlink(ini_get('upload_tmp_dir').$_FILES['myfile']['tmp_name']);
         exit;
     }
-   
-
     echo "Se completo correctamente!! ||";
     echo $_FILES['myfile']['name'];
     include('XLSX.php');
-    readAndC($_FILES['myfile']['name']);
+    readAndC($_FILES['myfile']['name'],$moth,$year);
     if(!headers_sent()){
         foreach(headers_list() as $header){
             header_remove($header);
         }
         header("Location:../CDMX/?city=CDMX");
     }
+}
 }
 ?>
