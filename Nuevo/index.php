@@ -73,6 +73,7 @@ function hasA($string){
             <option value="2022">2022</option>
             <option value="2023">2023</option>
         </select>
+        <input type="submit" value="Aceptar">
     </form>
     <form enctype="multipart/form-data" method="post">
         Subir registro exel: <input type="file" name="myfile">
