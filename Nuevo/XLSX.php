@@ -90,7 +90,7 @@ for($row = $resultrow; $row <= $highesRow; $row++){
 if($wasuploaded){
     $resultrowT = mysqli_fetch_assoc($resrow); 
     $suma = $resultrowT + $rowsR;
-    $sqlupdate = "UPDATE fileuploaded SET fRow='$suma' WHERE Moth='$moth' AND Year='$year'";
+    $sqlupdate = "UPDATE fileuploaded SET fRow=$suma WHERE Moth='$moth' AND Year='$year'";
     $queryfileupdate = mysqli_query($con, $sqlupdate);  
 }else{
     $sqlnewfile = "INSERT INTO fileuploaded(Moth,Year,fRow) VALUES('$moth','$year',$rowsR)"; 
