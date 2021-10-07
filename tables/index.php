@@ -181,10 +181,10 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
     <tr class="<?php echo $color ?>">
             <td><?php echo $total ?>%</td>
             <td><input type="text" name="Zona" value="<?php echo $show['Zona']?>"></td>
-            <td><input type="text" name="FechaC" value="<?php echo $show['FechaC']?>"></td>
-            <td><input type="text" name="HoraC" value="<?php echo $show['HoraC']?>"></td>
-            <td><input type="text" name="FechaE" value="<?php echo $show['FechaE']?>"></td>
-            <td><input type="text" name="HoraE" value="<?php echo $show['HoraE']?>"></td>
+            <td><input type="date" name="FechaC" value="<?php echo $show['FechaC']?>"></td>
+            <td><input type="time" name="HoraC" value="<?php echo $show['HoraC']?>"></td>
+            <td><input type="date" name="FechaE" value="<?php echo $show['FechaE']?>"></td>
+            <td><input type="time" name="HoraE" value="<?php echo $show['HoraE']?>"></td>
             <td><input type="text" name="DireccionE" value="<?php echo $show['DireccionE']?>"></td>
             <td><input type="text" name="RazonS" value="<?php echo $show['RazonS']?>"></td>
             <td><input type="text" name="DatosC" value="<?php echo $show['DatosC']?>"></td>
