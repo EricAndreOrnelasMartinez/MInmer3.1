@@ -55,7 +55,7 @@ function hasA($string){
     <div class="info"><label>Hora de salida con custodia</label><input type="text" name="HoraSCC"></div>
     <div class="info"><label>Observaciones</label><input type="text" name="Observaciones"></div>
     <div class="info"><input type="submit" value="Guardar"></div>
-    <div class="info"><button type="button" id="volver">Volver</button></div>
+    <div class="info"><a href="../tables?city=CDMX"><button type="button">Volver</button></a></div>
     <div class="info"><button type="button" id="duplicate">Duplicar</button></div>
     <h3 id="res"></h3>
     </form>

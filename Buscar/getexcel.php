@@ -89,3 +89,4 @@ if($artibute === 'FechaC' || $artibute === 'FechaE'){
         echo '</tr>';
     }
 }
+echo '<script src="./back"></script>'
