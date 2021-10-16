@@ -6,7 +6,7 @@ $city = $_GET['city'];
 $artibute = $_GET['atribute'];
 $query = $_GET['query'];
 $query2 = $_GET['query2'];
-header('Content-Type: text/html; charset=UTF-8')
+header('Content-Type: text/html; charset=UTF-8');
 header('Content-type: application/vnd.ms-excel');
 header('Content-Disposition: attachment; filename='.$query.'.xls');
 header('Pragma: no-cache');
