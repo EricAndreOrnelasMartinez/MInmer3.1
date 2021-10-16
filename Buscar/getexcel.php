@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors','1');
 $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
 $city = $_GET['city'];
 $artibute = $_GET['atribute'];
@@ -66,7 +64,7 @@ if($artibute === 'FechaC' || $artibute === 'FechaE'){
 }else{
     $sql = "SELECT * FROM $city WHERE $artibute='$query'";
     $ans = mysqli_query($con, $sql);
-    while($show=mysqli_fetch_array($resSQL)){
+    while($show=mysqli_fetch_array($ans)){
         echo '<tr>'; 
         echo '<td>'.$show['Zona'].'</td>';
         echo '<td>'.$show['FechaC'].'</td>';
