@@ -35,7 +35,7 @@ echo '<tr>
 <th>Custodia</th>
 <th>Hora salida con Custodia</th>
 <th>Observaciones</th>
-</tr>'
+</tr>';
 if($artibute === 'FechaC' || $artibute === 'FechaE'){
     $sql = "SELECT * FROM  $city WHERE $artibute BETWEEN '$query' AND '$query2'";
     $resSQL = mysqli_query($con, $sql);
@@ -61,7 +61,7 @@ if($artibute === 'FechaC' || $artibute === 'FechaE'){
         echo '<td>'.$show['Custodia'].'</td>';
         echo '<td>'.$show['HoraSCC'].'</td>';
         echo '<td>'.$show['Observaciones'].'</td>';
-        echo '</tr>'
+        echo '</tr>';
     }
 }else{
     $sql = "SELECT * FROM $city WHERE $artibute='$query'";
@@ -88,6 +88,6 @@ if($artibute === 'FechaC' || $artibute === 'FechaE'){
         echo '<td>'.$show['Custodia'].'</td>';
         echo '<td>'.$show['HoraSCC'].'</td>';
         echo '<td>'.$show['Observaciones'].'</td>';
-        echo '</tr>'
+        echo '</tr>';
     }
 }
