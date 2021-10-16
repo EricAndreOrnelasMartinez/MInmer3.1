@@ -91,4 +91,3 @@ if($artibute === 'FechaC' || $artibute === 'FechaE'){
         echo '</tr>';
     }
 }
-utf
