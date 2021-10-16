@@ -84,8 +84,8 @@ function hasA($string){
 <script src="secureacces.js"></script>
 </html>
 <?php 
-// error_reporting(E_ALL);
-// ini_set('display_errors','1');
+error_reporting(E_ALL);
+ini_set('display_errors','1');
 if(isset($_GET['moth'])){
 $moth = $_GET['moth']; 
 $year = $_GET['year'];
