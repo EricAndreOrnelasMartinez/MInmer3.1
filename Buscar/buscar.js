@@ -5,6 +5,7 @@ const select = document.getElementById('atribute')
 const zone = document.getElementById('zone')
 const query = document.getElementById('query')
 const query2 = document.getElementById('query2')
+const excel = document.getElementById('excel')
 const backbtn = document.getElementById('volver')
 fetch('../PHP/sessioncheck.php')
 .then(res => res.json())
@@ -181,4 +182,18 @@ function isNotEmpty(aux){
 }
 backbtn.addEventListener('click', e=>{
     window.history.back()
+})
+
+excel.addEventListener('click', e =>{
+    e.preventDefault();
+    let dataU = new FormData(form);
+    fetch('./geturl.php', {
+        method: 'POST',
+        body: dataU
+    })
+    .then(res => res.json())
+    .then(gottenurl => {
+        window.location.assign(gottenurl)
+    })
+
 })
