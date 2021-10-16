@@ -7,7 +7,7 @@ $artibute = $_GET['atribute'];
 $query = $_GET['query'];
 $query2 = $_GET['query2'];
 header('Content-type: application/vnd.ms-excel');
-header('Content-Disposition: attachment; filename='.$query.'xlsx');
+header('Content-Disposition: attachment; filename='.$query.'.xlsx');
 header('Pragma: no-cache');
 header('Expires: 0');
 echo '<table border=1>';
