@@ -200,7 +200,6 @@ excel.addEventListener('click', e =>{
 
 })
 pdf.addEventListener('click', e =>{
-    e.preventDefault()
     let dataU = new FormData(form);
     fetch('./geturlpdf.php', {
         method: 'POST',
