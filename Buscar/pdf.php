@@ -13,24 +13,24 @@ if($artibute === 'FechaC' || $artibute === 'FechaE'){
     $resSQL = mysqli_query($con, $sql);
     while($show=mysqli_fetch_array($resSQL)){
         $pdf->Cell(90,10,utf8_decode($show['Zona']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10,'Fecha de entrega: '.utf8_decode($show['FechaE']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10,'Hora de entrega: '.utf8_decode($show['HoraE']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10, utf8_decode('Dirección de entrega: ').utf8_decode($show['DireccionE']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10, utf8_decode('Datos de contacto: ').utf8_decode($show['DatosC']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10, utf8_decode('Razón social: ').utf8_decode($show['RazonS']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10, utf8_decode('Factura: ').utf8_decode($show['Factura']), 0, 1, 'R', 0);
+        $pdf->Cell(90,10,'Fecha de entrega: '.utf8_decode($show['FechaE']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10,'Hora de entrega: '.utf8_decode($show['HoraE']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10, utf8_decode('Dirección de entrega: ').utf8_decode($show['DireccionE']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10, utf8_decode('Datos de contacto: ').utf8_decode($show['DatosC']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10, utf8_decode('Razón social: ').utf8_decode($show['RazonS']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10, utf8_decode('Factura: ').utf8_decode($show['Factura']), 0, 1, 'C', 0);
     }
 }else{
     $sql = "SELECT * FROM $city WHERE $artibute='$query'";
     $ans = mysqli_query($con, $sql);
     while($show=mysqli_fetch_array($ans)){
-        $pdf->Cell(90,10,utf8_decode($show['Zona']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10,'Fecha de entrega: '.utf8_decode($show['FechaE']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10,'Hora de entrega: '.utf8_decode($show['HoraE']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10, utf8_decode('Dirección de entrega: ').utf8_decode($show['DireccionE']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10, utf8_decode('Datos de contacto: ').utf8_decode($show['DatosC']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10, utf8_decode('Razón social: ').utf8_decode($show['RazonS']), 0, 1, 'R', 0);
-        $pdf->Cell(90,10, utf8_decode('Factura: ').utf8_decode($show['Factura']), 0, 1, 'R', 0);
+        $pdf->Cell(90,10,utf8_decode($show['Zona']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10,'Fecha de entrega: '.utf8_decode($show['FechaE']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10,'Hora de entrega: '.utf8_decode($show['HoraE']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10, utf8_decode('Dirección de entrega: ').utf8_decode($show['DireccionE']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10, utf8_decode('Datos de contacto: ').utf8_decode($show['DatosC']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10, utf8_decode('Razón social: ').utf8_decode($show['RazonS']), 0, 1, 'C', 0);
+        $pdf->Cell(90,10, utf8_decode('Factura: ').utf8_decode($show['Factura']), 0, 1, 'C', 0);
     }
 }
 $pdf->Output();
