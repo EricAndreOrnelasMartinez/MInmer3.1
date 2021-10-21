@@ -7,7 +7,7 @@ $query2 = $_GET['query2'];
 $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
 $pdf = new FPDF();
 $pdf->AddPage();
-$pdf->SetFont('Arial','B',18);
+$pdf->SetFont('Arial','B',12);
 if($artibute === 'FechaC' || $artibute === 'FechaE'){
     $sql = "SELECT * FROM  $city WHERE $artibute BETWEEN '$query' AND '$query2'";
     $resSQL = mysqli_query($con, $sql);
