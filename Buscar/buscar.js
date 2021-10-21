@@ -6,6 +6,7 @@ const zone = document.getElementById('zone')
 const query = document.getElementById('query')
 const query2 = document.getElementById('query2')
 const excel = document.getElementById('excel')
+const pdf = document.getElementById('pdf')
 const backbtn = document.getElementById('volver')
 fetch('../PHP/sessioncheck.php')
 .then(res => res.json())
@@ -197,4 +198,16 @@ excel.addEventListener('click', e =>{
         window.location.assign(gottenurl)
     })
 
+})
+pdf.addEventListener('click', e =>{
+    e.preventDefault()
+    let dataU = new FormData(form);
+    fetch('./geturlpdf.php', {
+        method: 'POST',
+        body: dataU
+    })
+    .then(res => res.json())
+    .then(gottenurl => {
+        window.location.assign(gottenurl)
+    })
 })
