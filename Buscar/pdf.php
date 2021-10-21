@@ -16,11 +16,11 @@ if($artibute === 'FechaC' || $artibute === 'FechaE'){
         $pdf->Cell(90,10,utf8_decode($show['Zona']), 0, 1, 'R', 0);
         $pdf->Cell(90,10,'Fecha de entrega: '.utf8_decode($show['FechaE']), 0, 1, 'C', 0);
         $pdf->Cell(90,10,'Hora de entrega: '.utf8_decode($show['HoraE']), 0, 1, 'C', 0);
-        $pdf->MultiCell(90,10, utf8_decode('Dirección de entrega: ').utf8_decode($show['DireccionE']), 0, 1, 'C', 0);
-        $pdf->MultiCell(90,10, utf8_decode('Datos de contacto: ').utf8_decode($show['DatosC']), 0, 1, 'C', 0);
+        $pdf->MultiCell(90,10, utf8_decode('Dirección de entrega: ').utf8_decode($show['DireccionE']), 0, 'C');
+        $pdf->MultiCell(90,10, utf8_decode('Datos de contacto: ').utf8_decode($show['DatosC']), 0, 'C');
         $pdf->Cell(90,10, utf8_decode('Razón social: ').utf8_decode($show['RazonS']), 0, 1, 'C', 0);
         $pdf->Cell(90,10, utf8_decode('Factura: ').utf8_decode($show['Factura']), 0, 1, 'C', 0);
-        $pdf->MultiCell(90,10, utf8_decode('Observaciones: ').utf8_decode($show['Observaciones']), 0, 1, 'C', 0);
+        $pdf->MultiCell(90,10, utf8_decode('Observaciones: ').utf8_decode($show['Observaciones']), 0, 'C');
     }
 }else{
     $sql = "SELECT * FROM $city WHERE $artibute='$query'";
@@ -29,11 +29,11 @@ if($artibute === 'FechaC' || $artibute === 'FechaE'){
         $pdf->Cell(90,10,utf8_decode($show['Zona']), 0, 1, 'C', 0);
         $pdf->Cell(90,10,'Fecha de entrega: '.utf8_decode($show['FechaE']), 0, 1, 'C', 0);
         $pdf->Cell(90,10,'Hora de entrega: '.utf8_decode($show['HoraE']), 0, 1, 'C', 0);
-        $pdf->MultiCell(90,10, utf8_decode('Dirección de entrega: ').utf8_decode($show['DireccionE']), 0, 1, 'C', 0);
-        $pdf->MultiCell(90,10, utf8_decode('Datos de contacto: ').utf8_decode($show['DatosC']), 0, 1, 'C', 0);
+        $pdf->MultiCell(90,10, utf8_decode('Dirección de entrega: ').utf8_decode($show['DireccionE']), 0, 'C');
+        $pdf->MultiCell(90,10, utf8_decode('Datos de contacto: ').utf8_decode($show['DatosC']), 0, 'C');
         $pdf->Cell(90,10, utf8_decode('Razón social: ').utf8_decode($show['RazonS']), 0, 1, 'C', 0);
         $pdf->Cell(90,10, utf8_decode('Factura: ').utf8_decode($show['Factura']), 0, 1, 'C', 0);
-        $pdf->MultiCell(90,10, utf8_decode('Observaciones: ').utf8_decode($show['Observaciones']), 0, 1, 'C', 0);
+        $pdf->MultiCell(90,10, utf8_decode('Observaciones: ').utf8_decode($show['Observaciones']), 0,'C');
     }
 }
 $pdf->Output();
