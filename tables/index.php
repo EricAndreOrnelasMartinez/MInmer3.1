@@ -59,6 +59,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             <thead>
                 <tr>
                     <td>Progreso</td>
+                    <td>ID SQL</td>
                     <td>Zona</td>
                     <td>Fecha de carga</td>
                     <td>Hora de carga</td>
@@ -181,6 +182,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
     <form id="<?php echo $show['ID_SQL'] ?>tr">
     <tr class="<?php echo $color ?>">
             <td><?php echo $total ?>%</td>
+            <td><?php echo $show['ID_SQL'] ?></td>
             <td><input type="text" name="Zona" value="<?php echo $show['Zona']?>"></td>
             <td><input type="date" name="FechaC" value="<?php echo $show['FechaC']?>"></td>
             <td><input type="time" name="HoraC" value="<?php echo $show['HoraC']?>"></td>

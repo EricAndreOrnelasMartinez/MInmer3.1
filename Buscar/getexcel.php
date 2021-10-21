@@ -13,7 +13,7 @@ header('Expires: 0');
 echo '<meta charset="UTF-8">';
 echo '<table border=1>';
 echo '<tr>';
-echo '<th colspan=20>Planeación</th>'; 
+echo '<th colspan=21>Planeación</th>'; 
 echo '</tr>';
 echo '<tr>
 <th>Zona</th>

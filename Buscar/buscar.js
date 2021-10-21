@@ -30,6 +30,7 @@ form.addEventListener('submit', e  =>{
     let output = `
     <tr>
     <td>Progreso</td>
+    <td>ID_SQL</td>
     <td>Zona</td>
     <td>Fecha de carga</td>
     <td>Hora de carga</td>
@@ -129,6 +130,7 @@ form.addEventListener('submit', e  =>{
         }
         output += `<tr class="${color}">
         <td>${total}%</td>
+        <td>${data[i].ID_SQL}</td>
         <td>${data[i].Zona}</td>
         <td>${data[i].FechaC}</td>
         <td>${data[i].HoraC}</td>
