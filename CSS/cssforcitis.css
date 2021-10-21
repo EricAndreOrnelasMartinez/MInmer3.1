@@ -99,3 +99,6 @@ button:hover{
     width: 1px;
     height: 1px;
 }
+input[type='text']:active{
+    width: 300px;
+}
