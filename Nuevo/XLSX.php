@@ -49,7 +49,7 @@ $rowsR = 0;
 $obPHPE = $obReader->load($file);
 $sheet = $obPHPE->getSheet(0);
 $highesRow = $sheet->getHighestRow();
-for($row = $resultrow; $row <= $highesRow; $row++){
+for($row = 2; $row <= $highesRow; $row++){
     $HoraE = "ERROR:500";
     $FechaCB =  $sheet->getCell("A".$row)->getCalculatedValue();
     $FechaC = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaCB));
@@ -87,14 +87,14 @@ for($row = $resultrow; $row <= $highesRow; $row++){
     }
     echo mysqli_error($con);
 }
-if($wasuploaded){
-    $resultrowT = mysqli_fetch_assoc($resrow); 
-    $suma = $resultrowT + $rowsR;
-    $sqlupdate = "UPDATE fileuploaded SET fRow=$suma WHERE Moth='$moth' AND Year='$year'";
-    $queryfileupdate = mysqli_query($con, $sqlupdate);  
-}else{
-    $sqlnewfile = "INSERT INTO fileuploaded(Moth,Year,fRow) VALUES('$moth','$year',$rowsR)"; 
-    $queryfile = mysqli_query($con, $sqlnewfile);
-}
+// if($wasuploaded){
+//     $resultrowT = mysqli_fetch_assoc($resrow); 
+//     $suma = $resultrowT + $rowsR;
+//     $sqlupdate = "UPDATE fileuploaded SET fRow=$suma WHERE Moth='$moth' AND Year='$year'";
+//     $queryfileupdate = mysqli_query($con, $sqlupdate);  
+// }else{
+//     $sqlnewfile = "INSERT INTO fileuploaded(Moth,Year,fRow) VALUES('$moth','$year',$rowsR)"; 
+//     $queryfile = mysqli_query($con, $sqlnewfile);
+// }
 }
 ?>
