@@ -77,7 +77,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
                     <td>Operador</td>
                     <td>Maniobrista</td>
                     <td>Custodia</td>
-                    <td>Custodia</td>
+                    <td>Pesion</td>
                     <td>Hora salida con Custodia</td>
                     <td>Observaciones</td>
                     <td>Evidencia</td>
