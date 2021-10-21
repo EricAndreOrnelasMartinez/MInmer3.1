@@ -99,6 +99,6 @@ button:hover{
     width: 1px;
     height: 1px;
 }
-input[type='text']::selection{
+input[type='text']:hover{
     width: 300px;
 }
