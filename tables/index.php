@@ -198,6 +198,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             <td><input type="text" name="Operador" value="<?php echo $show['Operador']?>"></td>
             <td><input type="text" name="Maniobrista" value="<?php echo $show['Maniobrista']?>"></td>
             <td><input type="text" name="Custodia" value="<?php echo $show['Custodia']?>"></td>
+            <td><input type="text" name="Pension" value="<?php echo $show['Pension']?>"></td>
             <td><input type="time" name="HoraSCC" value="<?php echo $show['HoraSCC']?>"></td>
             <td><input type="text" name="Observaciones" value="<?php echo $show['Observaciones']?>"></td>
             <input type="hidden" name="ID_SQL" value="<?php echo $show['ID_SQL'] ?>">

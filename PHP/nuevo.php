@@ -12,6 +12,7 @@ $SO = $_POST['SO'];
 $Factura = $_POST['Factura'];
 $NumeroP = $_POST['NumeroP'];
 $NumeroC = $_POST['NumeroC'];
+$Pension = $_POST['Pension'];
 $NumeroT = $_POST['NumeroT'];
 $TipoT = $_POST['TipoT'];
 $Placas = $_POST['pla'];
@@ -20,7 +21,7 @@ $Maniobrista  = $_POST['Maniobrista'];
 $Custodia = $_POST['Custodia'];
 $HoraSCC = $_POST['HoraSCC']; 
 $Observaciones = $_POST['Observaciones'];
-$sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado) VALUE('$Zona','$FechaC','$HoraC','$FechaE','$HoraE','$DireccionE','$RazonS','$DatosC','$SO','$Factura','$NumeroP','$NumeroC','$NumeroT','$TipoT','$Placas','$Operador','$Maniobrista','$Custodia','$HoraSCC','$Observaciones',0)";
+$sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado,Pension) VALUE('$Zona','$FechaC','$HoraC','$FechaE','$HoraE','$DireccionE','$RazonS','$DatosC','$SO','$Factura','$NumeroP','$NumeroC','$NumeroT','$TipoT','$Placas','$Operador','$Maniobrista','$Custodia','$HoraSCC','$Observaciones',0,'$Pension')";
 $res = mysqli_query($con,$sql);
 if($res){
     echo json_encode('1');

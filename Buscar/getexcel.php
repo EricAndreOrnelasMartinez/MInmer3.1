@@ -10,6 +10,7 @@ header('Content-type: application/vnd.ms-excel');
 header('Content-Disposition: attachment; filename='.$query.'.xls');
 header('Pragma: no-cache');
 header('Expires: 0');
+echo '<meta charset="UTF-8">';
 echo '<table border=1>';
 echo '<tr>';
 echo '<th colspan=20>Planeación</th>'; 
@@ -33,6 +34,7 @@ echo '<tr>
 <th>Operador</th>
 <th>Maniobrista</th>
 <th>Custodia</th>
+<th>Pensio</th>
 <th>Hora salida con Custodia</th>
 <th>Observaciones</th>
 </tr>';

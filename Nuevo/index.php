@@ -25,7 +25,25 @@ function hasA($string){
     <title>Nuevo</title>
 </head>
 <body>
-    
+<form action="index.php" method="get">
+        <select name="moth">
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+        </select>
+        <select name="year">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+        </select>
+        <input type="submit" value="Aceptar">
+    </form>
+    <form enctype="multipart/form-data" method="post">
+        Subir registro exel: <input type="file" name="myfile">
+        <input type="submit" value="Subir">
+        <a href="../tables?city=CDMX"></a>
+    </form>
     <form id="data">
     Zona: <select class="option" name="Zona">
         <option value="CDMX">CDMX</option>
@@ -52,6 +70,7 @@ function hasA($string){
     <div class="info"><label>Operador</label><br><input type="text" name="Operador"></div>
     <div class="info"><label>Maniobrista</label><input type="text" name="Maniobrista"></div>
     <div class="info"><label>Custodia</label><br><input type="text" name="Custodia"></div>
+    <div class="info"><label>Pensión</label><br><input type="text" name="Pension"></div>
     <div class="info"><label>Hora de salida con custodia</label><input type="text" name="HoraSCC"></div>
     <div class="info"><label>Observaciones</label><input type="text" name="Observaciones"></div>
     <div class="info"><input type="submit" value="Guardar"></div>
@@ -61,24 +80,6 @@ function hasA($string){
     </form>
     <section id="main">
     </section>
-    <form action="index.php" method="get">
-        <select name="moth">
-            <option value="Enero">Enero</option>
-            <option value="Febrero">Febrero</option>
-            <option value="Marzo">Marzo</option>
-            <option value="Abril">Abril</option>
-        </select>
-        <select name="year">
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-        </select>
-        <input type="submit" value="Aceptar">
-    </form>
-    <form enctype="multipart/form-data" method="post">
-        Subir registro exel: <input type="file" name="myfile">
-        <input type="submit" value="Subir">
-    </form>
 </body>
 <script src="nuevo.js"></script>
 <script src="secureacces.js"></script>
@@ -115,7 +116,7 @@ if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name'
         foreach(headers_list() as $header){
             header_remove($header);
         }
-        header("Location:../CDMX/?city=CDMX");
+        header("Location:../tables?city=CDMX");
     }
 }
 }

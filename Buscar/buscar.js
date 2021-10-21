@@ -47,6 +47,7 @@ form.addEventListener('submit', e  =>{
     <td>Operador</td>
     <td>Maniobrista</td>
     <td>Custodia</td>
+    <td>Pension</td>
     <td>Hora salida con Custodia</td>
     <td>Observaciones</td>
     <td>Evidencia</td>
