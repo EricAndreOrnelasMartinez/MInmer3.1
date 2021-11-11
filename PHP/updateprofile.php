@@ -5,7 +5,8 @@ $mailB = $_SESSION['mail'];
 $mail = $_POST['mail'];
 $name = $_POST['nombre'];
 $last = $_POST['apellido'];
-$rowN = $_POST['rowN'];
+$Moth = $_POST['Moth'];
+$MothT = $_POST['MothT'];
 $sql = "UPDATE users SET Mail='$mail',Nombre='$name',Apellido='$last',Moth=$Moth, MothT=$MothT WHERE Mail='$mailB'";
 $res = mysqli_query($con, $sql);
 if($res){
