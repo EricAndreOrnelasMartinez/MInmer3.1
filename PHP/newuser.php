@@ -7,7 +7,7 @@ $pass = $_POST['pass1'];
 $nivel = $_POST['nivel'];
 if(!empty($mail) && !empty($name) && !empty($last) && !empty($pass) && !empty($nivel)){
     $aux = intval($nivel);
-    $sql = "INSERT INTO users(Mail,Nombre,Apellido,Contrasena,Nivel,rowN) VALUES('$mail','$name','$last','$pass',$aux, 50)";
+    $sql = "INSERT INTO users(Mail,Nombre,Apellido,Contrasena,Nivel,Moth.MothT) VALUES('$mail','$name','$last','$pass',$aux, 'Enero','2021')";
     $res = mysqli_query($con,$sql);
     if($res){
         echo json_encode('1');

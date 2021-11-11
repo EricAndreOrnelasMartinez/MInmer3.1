@@ -35,7 +35,7 @@ function newString($string){
 function readAndC($fileI, $moth, $year){
 $wasuploaded = true;
 $con = mysqli_connect("localhost","root","Lasric.2018","Minmer2");
-$sqlgetrow = "SELECT fRow FROM fileuploaded WHERE Moth='$moth' AND Year='$year'";
+$sqlgetrow = "SELECT Capturado FROM Frow WHERE Moth='$moth' AND MothT='$year'";
 $resrow = mysqli_query($con, $sqlgetrow);
 $resultrow = mysqli_fetch_assoc($resrow);
 if(empty($resultrow)){
@@ -49,7 +49,7 @@ $rowsR = 0;
 $obPHPE = $obReader->load($file);
 $sheet = $obPHPE->getSheet(0);
 $highesRow = $sheet->getHighestRow();
-for($row = 2; $row <= $highesRow; $row++){
+for($row = $resultrow; $row <= $highesRow; $row++){
     $HoraE = "ERROR:500";
     $FechaCB =  $sheet->getCell("A".$row)->getCalculatedValue();
     $FechaC = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaCB));
@@ -77,7 +77,7 @@ for($row = 2; $row <= $highesRow; $row++){
     $TipoT = $sheet->getCell("K".$row)->getCalculatedValue();
     $Operador = $sheet->getCell("M".$row)->getCalculatedValue();
     $Placas = $sheet->getCell("N".$row)->getCalculatedValue();
-    $sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,HoraSCC,Observaciones,Terminado,Pension) VALUE('$Zona','$FechaC','','$FechaE','$HoraE','$DireccionE','','','$SO','$Factura','$NumeroP','$NumeroC','','$TipoT','$Placas','$Operador','','','','',0,'')";
+    $sql = "INSERT INTO $Zona(Zona,FechaC,HoraC,FechaE,HoraE,DireccionE,RazonS,DatosC,SO,Factura,NumeroP,NumeroC,NumeroT,TipoT,Placas,Operador,Maniobrista,Custodia,Pension,HoraSCC,Observaciones,Terminado,Moth,MothT) VALUE('$Zona','$FechaC','','$FechaE','$HoraE','$DireccionE','','','$SO','$Factura','$NumeroP','$NumeroC','','$TipoT','$Placas','$Operador','','','','','',0,'$moth','$year')";
     $res = mysqli_query($con,$sql);
     if($res){
         $rowsR = $row;
@@ -87,14 +87,14 @@ for($row = 2; $row <= $highesRow; $row++){
     }
     echo mysqli_error($con);
 }
-// if($wasuploaded){
-//     $resultrowT = mysqli_fetch_assoc($resrow); 
-//     $suma = $resultrowT + $rowsR;
-//     $sqlupdate = "UPDATE fileuploaded SET fRow=$suma WHERE Moth='$moth' AND Year='$year'";
-//     $queryfileupdate = mysqli_query($con, $sqlupdate);  
-// }else{
-//     $sqlnewfile = "INSERT INTO fileuploaded(Moth,Year,fRow) VALUES('$moth','$year',$rowsR)"; 
-//     $queryfile = mysqli_query($con, $sqlnewfile);
-// }
+if($wasuploaded){
+    $resultrowT = mysqli_fetch_assoc($resrow); 
+    $suma = $resultrowT + $rowsR;
+    $sqlupdate = "UPDATE Frow SET Capturado=$suma WHERE Moth='$moth' AND MothT='$year'";
+    $queryfileupdate = mysqli_query($con, $sqlupdate);  
+}else{
+    $sqlnewfile = "INSERT INTO Frow(Moth,MothT,Capturado,uploaded) VALUES('$moth','$year',$rowsR,1)"; 
+    $queryfile = mysqli_query($con, $sqlnewfile);
+}
 }
 ?>

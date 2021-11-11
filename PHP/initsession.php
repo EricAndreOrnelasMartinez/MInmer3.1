@@ -12,10 +12,13 @@ if(!empty($mail) && !empty($pass)){
             session_start();
             $sqlnivel = "SELECT Nivel FROM users WHERE Mail='$mail'";
             $resnivel = mysqli_query($con, $sqlnivel);
-            $sqlrow = "SELECT rowN FROM users WHERE Mail='$mail'";
-            $resRow = mysqli_query($con, $sqlrow);
+            $sqlmoth = "SELECT Moth FROM users WHERE Mail='$mail'";
+            $resmoth = mysqli_query($con, $sqlmoth);
+            $sqlmothT = "SELECT MothT FROM users WHERE Mail='$mail'";
+            $resmothT = mysqli_query($con, $sqlmothT);
             $_SESSION['nivel'] = implode(mysqli_fetch_assoc($resnivel));
-            $_SESSION['rowN'] = implode(mysqli_fetch_assoc($resRow));
+            $_SESSION['Moth'] = implode(mysqli_fetch_assoc($resmoth));
+            $_SESSION['MothT'] = implode(mysqli_fetch_assoc($resmothT));
             $_SESSION['mail'] = $mail;
             echo json_encode('1');
         }else{
