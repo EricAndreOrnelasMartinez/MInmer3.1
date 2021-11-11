@@ -49,7 +49,7 @@ $rowsR = 0;
 $obPHPE = $obReader->load($file);
 $sheet = $obPHPE->getSheet(0);
 $highesRow = $sheet->getHighestRow();
-for($row = $resultrow; $row <= $highesRow; $row++){
+for($row = 2; $row <= $highesRow; $row++){
     $HoraE = "ERROR:500";
     $FechaCB =  $sheet->getCell("A".$row)->getCalculatedValue();
     $FechaC = date('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($FechaCB));
