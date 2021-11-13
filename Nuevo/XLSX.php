@@ -33,15 +33,15 @@ function newString($string){
     }
     }
 function readAndC($fileI, $moth, $year){
-$wasuploaded = true;
+//$wasuploaded = true;
 $con = mysqli_connect("localhost","root","Lasric.2018","Minmer2");
-$sqlgetrow = "SELECT Capturado FROM Frow WHERE Moth='$moth' AND MothT='$year'";
-$resrow = mysqli_query($con, $sqlgetrow);
-$resultrow = mysqli_fetch_assoc($resrow);
-if(empty($resultrow)){
-    $wasuploaded = false;
-    $resultrow = 2;
-}
+// $sqlgetrow = "SELECT Capturado FROM Frow WHERE Moth='$moth' AND MothT='$year'";
+// $resrow = mysqli_query($con, $sqlgetrow);
+// $resultrow = mysqli_fetch_assoc($resrow);
+// if(empty($resultrow)){
+//     $wasuploaded = false;
+//     $resultrow = 2;
+// }
 $file = __DIR__."/uploads/".$fileI;
 $inputFileType = PHPExcel_IOFactory::identify($file);
 $obReader = PHPExcel_IOFactory::createReader($inputFileType);
@@ -87,14 +87,14 @@ for($row = 2; $row <= $highesRow; $row++){
     }
     echo mysqli_error($con);
 }
-if($wasuploaded){
-    $resultrowT = mysqli_fetch_assoc($resrow); 
-    $suma = $resultrowT + $rowsR;
-    $sqlupdate = "UPDATE Frow SET Capturado=$suma WHERE Moth='$moth' AND MothT='$year'";
-    $queryfileupdate = mysqli_query($con, $sqlupdate);  
-}else{
-    $sqlnewfile = "INSERT INTO Frow(Moth,MothT,Capturado,uploaded) VALUES('$moth','$year',$rowsR,1)"; 
-    $queryfile = mysqli_query($con, $sqlnewfile);
-}
+// if($wasuploaded){
+//     $resultrowT = mysqli_fetch_assoc($resrow); 
+//     $suma = $resultrowT + $rowsR;
+//     $sqlupdate = "UPDATE Frow SET Capturado=$suma WHERE Moth='$moth' AND MothT='$year'";
+//     $queryfileupdate = mysqli_query($con, $sqlupdate);  
+// }else{
+//     $sqlnewfile = "INSERT INTO Frow(Moth,MothT,Capturado,uploaded) VALUES('$moth','$year',$rowsR,1)"; 
+//     $queryfile = mysqli_query($con, $sqlnewfile);
+// }
 }
 ?>
