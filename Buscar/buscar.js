@@ -152,7 +152,7 @@ form.addEventListener('submit', e  =>{
         <td>${data[i].HoraSCC}</td>
         <td>${data[i].Observaciones}</td>
         <td><a href="../tables/Evidencias/${zone.value}/${data[i].Factura}.pdf">Ir</a></td>
-        <td><a download="${data[i].Factura}" href="../tables/Evidencias/${zone.value}/${data[i].Factura}.pdf">Descargar</a></td>
+        <td><a download="${data[i].Factura}.pdf" href="../tables/Evidencias/${zone.value}/${data[i].Factura}.pdf">Descargar</a></td>
         <td>${data[i].Terminado}</td>
         </tr>`
         table.innerHTML = output;
