@@ -100,7 +100,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
         function validation($var){
             return !empty($var);
         }
-        $sql = "SELECT * FROM Modifications ORDER BY ID_SQL DESC LIMIT $rowN";
+        $sql = "SELECT * FROM $city ORDER BY ID_SQL DESC LIMIT $rowN";
         $ans = mysqli_query($con,$sql);
         while($show = mysqli_fetch_array($ans)){
             $total = 0;
