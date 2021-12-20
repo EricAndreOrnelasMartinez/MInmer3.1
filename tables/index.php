@@ -20,8 +20,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
             <?php
             session_start();
             $aux = $_SESSION['nivel'];
-            $Moth = $_SESSION['Moth'];
-            $MothT = $_SESSION['MothT'];
+            $rowN = $_SESSION['rowN'];
             if($aux >= 5){
                 ?>
                 <li><a href="../Perfil"><img src="./perfil.png" width="40"></a></li>
@@ -101,7 +100,7 @@ $con = mysqli_connect('localhost','root','Lasric.2018','Minmer2');
         function validation($var){
             return !empty($var);
         }
-        $sql = "SELECT * FROM $city WHERE Moth='$Moth' AND MothT='$MothT'";
+        $sql = "SELECT * FROM Modifications ORDER BY ID_SQL DESC LIMIT $rowN";
         $ans = mysqli_query($con,$sql);
         while($show = mysqli_fetch_array($ans)){
             $total = 0;
