@@ -15,7 +15,7 @@ if(!empty($mail) && !empty($pass)){
             $sqlrow = "SELECT rowN FROM users WHERE Mail='$mail'";
             $resrow = mysqli_query($con, $sqlrow);
             $_SESSION['nivel'] = implode(mysqli_fetch_assoc($resnivel));
-            $_SESSION['Moth'] = implode(mysqli_fetch_assoc($resrow));
+            $_SESSION['rowN'] = implode(mysqli_fetch_assoc($resrow));
             $_SESSION['mail'] = $mail;
             echo json_encode('1');
         }else{
