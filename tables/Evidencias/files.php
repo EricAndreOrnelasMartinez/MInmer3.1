@@ -1,5 +1,4 @@
 <?php 
-echo "todo bien";
 $city = $_GET['city'];
     foreach($_FILES['archivo']['tmp_name'] as $key => $tmp_name){
         if($_FILES['archivo']['tmp_name'][$key]){
