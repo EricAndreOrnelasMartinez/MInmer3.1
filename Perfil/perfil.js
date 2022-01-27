@@ -10,8 +10,7 @@ fetch('../PHP/getprofile.php')
         Email <input type="text" value="${dataF[i].Mail}" name="mail"/>
         Nombre <input type="text" value="${dataF[i].Nombre}" name="nombre"/>
         Apellido <input type="text" value="${dataF[i].Apellido}" name="apellido"/>
-        Mes <input type="text" value="${dataF[i].Moth}" name="Moth"/>
-        Año <input type="number" value="${dataF[i].MothT}" name="MothT"/>
+        Valor maximo <input type="number" value="${dataF[i].rowN}" name="rowN"/>
         <input type="submit" value="Actualizar"/>
         <a href="../tables/?city=CDMX"><button type="button">Volver</button></a>
         <h2 id="res"></h2>
